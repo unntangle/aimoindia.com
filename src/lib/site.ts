@@ -32,6 +32,9 @@ export const img = {
   agri: U("1500382017468-9049fed747ef"),
   startup: U("1522071820081-009f0129c71c"),
   ports: U("1494412574643-ff11b0a5c1c3"),
+  conferenceHall: U("1497366754035-f200968a6e72"),
+  auditorium: U("1519167758481-83f550bb49b3"),
+  summitCrowd: U("1511578314322-379afb476865"),
 };
 
 export const site = {
@@ -74,29 +77,43 @@ export type NavItem = {
 export const nav: NavItem[] = [
   { label: "Home", href: "/" },
   {
-    label: "About",
+    label: "Know AIMO",
     href: "/about",
     children: [
-      { label: "Who We Are", href: "/about" },
+      { label: "About AIMO", href: "/about" },
       { label: "Our Founder", href: "/about/founder" },
-      { label: "National Leadership", href: "/about/leadership" },
-      { label: "Industry Representation", href: "/about#representation" },
-      { label: "Government Relations", href: "/about#government" },
+      { label: "About Tamil Nadu State Board", href: "/about/tamil-nadu-state-board" },
+      { label: "Office Bearers & Committee Members", href: "/about/office-bearers" },
     ],
   },
-  { label: "Membership", href: "/membership" },
-  { label: "State Boards", href: "/state-boards" },
-  { label: "AIMO Awards", href: "/awards" },
   {
-    label: "Events",
+    label: "Membership",
+    href: "/membership",
+    children: [
+      { label: "Why Join", href: "/membership" },
+      { label: "Membership Categories", href: "/membership/categories" },
+      { label: "Online Membership Form", href: "/membership/apply" },
+    ],
+  },
+  {
+    label: "Events & Awards",
     href: "/events",
     children: [
-      { label: "Upcoming Events", href: "/events" },
-      { label: "Past Events", href: "/events#past" },
-      { label: "Gallery", href: "/gallery" },
+      { label: "Upcoming Event", href: "/events" },
+      { label: "Past Events", href: "/events/past" },
+      { label: "Photo Gallery", href: "/gallery" },
+      { label: "Awards", href: "/awards" },
     ],
   },
-  { label: "Press", href: "/press" },
+  {
+    label: "Resources",
+    href: "/resources/book-hall",
+    children: [
+      { label: "Book Hall & Board Room", href: "/resources/book-hall" },
+      { label: "Our Magazine", href: "/resources/magazine" },
+      { label: "Internship Programme", href: "/resources/internship" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -104,28 +121,31 @@ export const nav: NavItem[] = [
 
 export const heroSlides = [
   {
-    eyebrow: "Since 1941 · Founded by Sir M. Visvesvaraya",
-    title: "The Leading Voice of Indian Industry",
-    body: "For over eight decades AIMO has carried the concerns of India's manufacturers into the rooms where policy is written — from the first five-year plans to today's MSME reforms.",
-    image: img.heroConference,
-    cta: { label: "Become a Member", href: "/membership" },
-    alt: "Delegates at a national industry convention",
+    eyebrow: "Upcoming · 19–20 November 2026",
+    title: "AIMO National Manufacturing Summit",
+    body: "Two days on the questions that will decide the next decade of Indian manufacturing — export competitiveness, credit beyond collateral, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters at the Nehru Centre, Mumbai.",
+    image: img.summitCrowd,
+    cta: { label: "View Event Details", href: "/events" },
+    cta2: { label: "Past Events", href: "/events/past" },
+    alt: "Delegates at the AIMO National Manufacturing Summit",
   },
   {
-    eyebrow: "51 Million MSMEs · One Organisation",
-    title: "Where Small Enterprise Finds a Loud Voice",
-    body: "Engineering, chemicals, pharma, food processing, textiles and services — AIMO members span every sector that keeps the Indian economy moving.",
-    image: img.heroFactory,
-    cta: { label: "Explore Membership Benefits", href: "/membership#benefits" },
-    alt: "Skilled worker on a manufacturing shop floor",
+    eyebrow: "Why Become an AIMO Member?",
+    title: "A Smaller Enterprise Gets a Louder Voice",
+    body: "One promoter with a grievance is noise. Two hundred units with the same objection and the numbers to back it is a sector position — and that is what changes a rule. Policy representation, credit clinics, research and recognition, since 1941.",
+    image: img.networking,
+    cta: { label: "Why Join AIMO", href: "/membership" },
+    cta2: { label: "Become a Member", href: "/membership/apply" },
+    alt: "AIMO members networking at a chapter meeting",
   },
   {
-    eyebrow: "Policy · Advocacy · Representation",
-    title: "Bridging Government and the Shop Floor",
-    body: "AIMO closes the last-mile gap between well-intentioned schemes and the entrepreneurs they were designed to serve.",
-    image: img.heroPolicy,
-    cta: { label: "Our Government Relations", href: "/about#government" },
-    alt: "Industry representatives in a policy consultation",
+    eyebrow: "Book Hall & Board Room",
+    title: "Your Next Meeting, at the AIMO Premises",
+    body: "A 120-seat conference hall, an 18-seat board room and a 40-seat training room in the heart of Fort, Mumbai — fully equipped, air-conditioned, and available at substantially reduced rates for members.",
+    image: img.conferenceHall,
+    cta: { label: "Check Availability", href: "/resources/book-hall" },
+    cta2: { label: "See the Spaces", href: "/resources/book-hall#spaces" },
+    alt: "The AIMO conference hall set up for a session",
   },
 ];
 
@@ -445,3 +465,200 @@ export const testimonials = [
     org: "Chemical processing, Vadodara",
   },
 ];
+
+/* ------------------------ Tamil Nadu State Board ------------------------ */
+
+export const tnBoard = {
+  name: "AIMO Tamil Nadu State Board",
+  city: "Chennai",
+  intro:
+    "The Tamil Nadu State Board is among the most active chapters in the AIMO network, serving members across Chennai, Coimbatore, Tiruppur, Hosur, Salem, Madurai and Trichy.",
+  clusters: [
+    { name: "Chennai & Ambattur", note: "Auto components, electricals, light engineering" },
+    { name: "Coimbatore", note: "Pumps, motors, foundries, machine tools" },
+    { name: "Tiruppur", note: "Knitwear, garments, textile processing" },
+    { name: "Hosur", note: "Auto ancillaries, electronics, precision components" },
+    { name: "Salem & Erode", note: "Steel, power looms, agro processing" },
+    { name: "Madurai & Trichy", note: "Fabrication, rubber, food processing" },
+  ],
+  activities: [
+    "Monthly members' meet with a guest speaker from industry or administration",
+    "Scheme clinics with TIIC, SIDBI and public sector banks",
+    "Liaison with the Department of Industries and the District Industries Centres",
+    "Skill development tie-ups with polytechnics and engineering colleges",
+    "Buyer–supplier meets with large OEMs operating in the state",
+    "Representation on GST, power tariff and labour compliance matters",
+  ],
+};
+
+/* --------------------- Office bearers & committee ----------------------- */
+
+export const stateOfficeBearers = [
+  { name: "Shri R. Radhakrishnan", role: "Chairman", city: "Chennai", email: "gs@aimoindia.com" },
+  { name: "To be announced", role: "Vice Chairman", city: "Coimbatore", email: "aimoindia@aimoindia.com" },
+  { name: "To be announced", role: "Hon. Secretary", city: "Chennai", email: "aimoindia@aimoindia.com" },
+  { name: "To be announced", role: "Hon. Treasurer", city: "Chennai", email: "aimoindia@aimoindia.com" },
+];
+
+export const committees = [
+  {
+    name: "Policy & Representation",
+    brief: "Prepares submissions to state and central departments and tracks consultation windows.",
+    seats: 7,
+  },
+  {
+    name: "Membership & Chapters",
+    brief: "Enrolment, renewals, and support to district chapters across Tamil Nadu.",
+    seats: 6,
+  },
+  {
+    name: "Events & Awards",
+    brief: "Plans the annual calendar, the awards cycle and the state convention.",
+    seats: 8,
+  },
+  {
+    name: "Finance & Audit",
+    brief: "Budget, accounts, subscriptions and the annual audited statement.",
+    seats: 5,
+  },
+  {
+    name: "Skills & Internship",
+    brief: "College tie-ups, the internship programme and shop-floor training placements.",
+    seats: 6,
+  },
+  {
+    name: "Publications",
+    brief: "Editorial direction for the magazine, the policy digest and member communications.",
+    seats: 5,
+  },
+];
+
+/* ------------------------- Hall & board room ---------------------------- */
+
+export const venues = [
+  {
+    name: "Main Conference Hall",
+    capacity: "120 seated, theatre style",
+    area: "1,800 sq ft",
+    image: img.lectureHall,
+    rates: "Members ₹ 6,000 / half day · Non-members ₹ 10,000 / half day",
+    features: [
+      "Projector, screen and PA system",
+      "Podium with cordless microphones",
+      "Centrally air-conditioned",
+      "Adjacent space for tea and registration",
+      "Wi-Fi throughout",
+    ],
+  },
+  {
+    name: "Board Room",
+    capacity: "18 seated, boardroom style",
+    area: "600 sq ft",
+    image: img.boardroom,
+    rates: "Members ₹ 2,500 / half day · Non-members ₹ 4,000 / half day",
+    features: [
+      "Large display with HDMI and casting",
+      "Speakerphone for hybrid meetings",
+      "Writing wall and flip chart",
+      "Pantry service on request",
+      "Suited to interviews and small committees",
+    ],
+  },
+  {
+    name: "Training Room",
+    capacity: "40 seated, classroom style",
+    area: "900 sq ft",
+    image: img.dataScreen,
+    rates: "Members ₹ 3,500 / half day · Non-members ₹ 6,000 / half day",
+    features: [
+      "Classroom desks with power points",
+      "Whiteboard and projector",
+      "Suited to workshops and certification courses",
+      "Breakout corner for group work",
+      "Wi-Fi throughout",
+    ],
+  },
+];
+
+/* ------------------------------ Magazine -------------------------------- */
+
+export const magazine = {
+  name: "AIMO Industry Review",
+  cadence: "Quarterly",
+  intro:
+    "A quarterly journal written largely by members, for members — case notes from the shop floor, scheme explainers, and the arguments AIMO is currently making in public.",
+  sections: [
+    "Cover story on a policy question facing the sector",
+    "Member profile: one enterprise, examined properly",
+    "Scheme desk: what changed, who qualifies, how to apply",
+    "Technology note on automation, energy or quality systems",
+    "Chapter round-up from the State Boards",
+  ],
+  issues: [
+    {
+      title: "Energy costs and the small unit",
+      issue: "Vol. 12 · Issue 2 · Apr–Jun 2026",
+      blurb:
+        "Power tariffs have overtaken credit as the constraint members name first. We look at what open access, rooftop solar and load management actually deliver at MSME scale.",
+      image: img.precision,
+    },
+    {
+      title: "After the trade agreements",
+      issue: "Vol. 12 · Issue 1 · Jan–Mar 2026",
+      blurb:
+        "New market access is not the same as new orders. Members who made the transition describe the compliance, certification and working-capital reality.",
+      image: img.ports,
+    },
+    {
+      title: "The succession issue",
+      issue: "Vol. 11 · Issue 4 · Oct–Dec 2025",
+      blurb:
+        "A generation of promoters is handing over. What the successful handovers had in common, and what the failed ones did not plan for.",
+      image: img.officeTeam,
+    },
+  ],
+};
+
+/* --------------------------- Internship --------------------------------- */
+
+export const internship = {
+  intro:
+    "AIMO places engineering, management and polytechnic students into member enterprises for structured internships — real shop-floor and back-office work, supervised, with a written assessment at the end.",
+  duration: "4 to 12 weeks · Summer and winter cycles",
+  tracks: [
+    {
+      title: "Production & Operations",
+      body: "Line balancing, quality systems, maintenance planning and lean practice inside a working unit.",
+      suits: "Mechanical, production and industrial engineering students",
+    },
+    {
+      title: "Quality & Compliance",
+      body: "ISO documentation, inspection protocols, vendor audits and regulatory filings.",
+      suits: "Engineering and applied science students",
+    },
+    {
+      title: "Supply Chain & Exports",
+      body: "Procurement, inventory, logistics documentation and export paperwork end to end.",
+      suits: "Management and commerce students",
+    },
+    {
+      title: "Digital & Data",
+      body: "ERP rollout support, dashboard building, and automating a process that is currently manual.",
+      suits: "Computer science, IT and analytics students",
+    },
+  ],
+  studentSteps: [
+    "Apply with your CV, college and preferred track",
+    "AIMO matches you to a member enterprise near you",
+    "Interview with the host unit",
+    "Complete the internship with a named supervisor",
+    "Receive a joint certificate from AIMO and the host",
+  ],
+  hostSteps: [
+    "Tell us the track, duration and number of interns",
+    "Nominate a supervisor within your unit",
+    "We shortlist and send candidates for your interview",
+    "Confirm the stipend and start date",
+    "Submit a short assessment at the end",
+  ],
+};

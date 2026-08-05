@@ -21,17 +21,21 @@ const socialLinks = [
 const quickLinks = [
   { label: "About AIMO", href: "/about" },
   { label: "Our Founder", href: "/about/founder" },
-  { label: "National Leadership", href: "/about/leadership" },
-  { label: "State Boards", href: "/state-boards" },
-  { label: "Membership", href: "/membership" },
+  { label: "Tamil Nadu State Board", href: "/about/tamil-nadu-state-board" },
+  { label: "Office Bearers", href: "/about/office-bearers" },
+  { label: "Why Join", href: "/membership" },
+  { label: "Membership Categories", href: "/membership/categories" },
 ];
 
 const otherLinks = [
-  { label: "AIMO Awards", href: "/awards" },
-  { label: "Upcoming Events", href: "/events" },
-  { label: "Press Releases", href: "/press" },
+  { label: "Upcoming Event", href: "/events" },
+  { label: "Past Events", href: "/events/past" },
   { label: "Photo Gallery", href: "/gallery" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "AIMO Awards", href: "/awards" },
+  { label: "Book Hall & Board Room", href: "/resources/book-hall" },
+  { label: "Our Magazine", href: "/resources/magazine" },
+  { label: "Internship Programme", href: "/resources/internship" },
+  { label: "Press Releases", href: "/press" },
 ];
 
 export default function Footer() {
@@ -134,7 +138,7 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-white">
               Terms
             </Link>
-            <Link href="/membership" className="text-brand hover:text-white">
+            <Link href="/membership/apply" className="text-brand hover:text-white">
               Become a Member
             </Link>
           </p>

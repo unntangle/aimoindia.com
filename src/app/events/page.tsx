@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Clock, MapPin } from "lucide-react";
+import { ArrowRight, CalendarDays, Camera, Clock, MapPin, Trophy } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import UpcomingEvent from "@/components/home/UpcomingEvent";
 import Newsletter from "@/components/home/Newsletter";
 import Img from "@/components/ui/Img";
-import { eventGallery, img } from "@/lib/site";
+import { img } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -72,7 +72,7 @@ export default function EventsPage() {
     <>
       <PageHero
         eyebrow="AIMO Calendar"
-        title="Upcoming Events"
+        title="Upcoming Event"
         intro="Conclaves, clinics, workshops and factory visits — deliberately held across the states rather than only in the metros."
         image={img.lectureHall}
         crumb="Events"
@@ -145,46 +145,42 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Past events */}
-      <section id="past" className="scroll-mt-28 bg-mist py-20 lg:py-24">
-        <div className="shell">
-          <SectionHeading
-            eyebrow="Archive"
-            title="Past events"
-            intro="Presentations and summary notes from recent sessions are available to members on request."
-          />
-
-          <div className="mt-14 grid gap-5 sm:grid-cols-2">
-            {eventGallery.map((e, i) => (
-              <article
-                key={e.title}
-                className="group relative aspect-[16/9] overflow-hidden rounded-xl"
-              >
-                <Img
-                  src={e.image}
-                  alt={e.title}
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  seed={`past-${i}`}
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/35 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="flex items-center gap-1.5 font-display text-[12.5px] font-semibold uppercase tracking-widest text-brand-light">
-                    <CalendarDays className="h-3.5 w-3.5" />
-                    {e.meta}
-                  </p>
-                  <h3 className="mt-1.5 text-xl text-white">{e.title}</h3>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/gallery" className="btn btn-primary">
-              Browse the photo gallery
-              <ArrowRight className="h-4 w-4" />
+      {/* Links onward */}
+      <section className="bg-mist py-20 lg:py-24">
+        <div className="shell grid gap-6 md:grid-cols-3">
+          {[
+            {
+              href: "/events/past",
+              icon: CalendarDays,
+              title: "Past Events",
+              body: "Conclaves, clinics and conventions already held, with summary notes available to members.",
+            },
+            {
+              href: "/gallery",
+              icon: Camera,
+              title: "Photo Gallery",
+              body: "Photographs from council sessions, factory visits, workshops and award nights.",
+            },
+            {
+              href: "/awards",
+              icon: Trophy,
+              title: "Awards",
+              body: "Six categories recognising members who set the standard, judged on evidence and verified on site.",
+            },
+          ].map((c) => (
+            <Link key={c.href} href={c.href} className="card group p-8">
+              <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+                <c.icon className="h-5 w-5" />
+              </span>
+              <h3 className="mt-5 text-xl transition-colors group-hover:text-brand">
+                {c.title}
+              </h3>
+              <p className="mt-3 text-[14.5px] leading-relaxed text-slatey">{c.body}</p>
+              <span className="mt-5 inline-flex items-center gap-1.5 font-display text-[14px] font-semibold text-brand">
+                Open <ArrowRight className="h-4 w-4" />
+              </span>
             </Link>
-          </div>
+          ))}
         </div>
       </section>
 

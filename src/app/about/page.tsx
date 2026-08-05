@@ -216,14 +216,14 @@ export default function AboutPage() {
                 body: "Sir M. Visvesvaraya — engineer, Diwan of Mysore, and the reason this organisation exists.",
               },
               {
-                href: "/about/leadership",
-                title: "National Leadership",
-                body: "The office bearers currently carrying the mandate, and how to reach them.",
+                href: "/about/tamil-nadu-state-board",
+                title: "Tamil Nadu State Board",
+                body: "The state chapter, its district clusters and what the board actually does month to month.",
               },
               {
-                href: "/state-boards",
-                title: "State Boards",
-                body: "Annually elected regional boards, each with its own secretariat and calendar.",
+                href: "/about/office-bearers",
+                title: "Office Bearers & Committees",
+                body: "The national and state teams carrying the mandate, and the standing committees.",
               },
             ].map((c) => (
               <Link key={c.href} href={c.href} className="card group p-8">

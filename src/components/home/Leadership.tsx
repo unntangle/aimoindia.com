@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import { leaders } from "@/lib/site";
 
 const tints = [
@@ -22,60 +24,118 @@ function initials(name: string) {
 }
 
 export default function Leadership() {
-  return (
-    <section className="py-20 lg:py-24">
-      <div className="shell">
-        <SectionHeading
-          eyebrow="National Leadership Team"
-          title="The people who carry the mandate"
-          intro="AIMO's national office bearers are working promoters themselves — elected by the membership and answerable to it."
-        />
+  const track = useRef<HTMLDivElement>(null);
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+  const scroll = (dir: -1 | 1) => {
+    const el = track.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("[data-card]");
+    const step = card ? card.offsetWidth + 24 : 300;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
+  return (
+    <section className="overflow-hidden py-20 lg:py-24">
+      {/* Heading */}
+      <div className="shell text-center">
+        <p className="font-display text-[15px] font-medium text-brand">
+          National Leadership Team
+        </p>
+        <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[2.75rem]">
+          The people who carry the mandate
+        </h2>
+      </div>
+
+      {/* Carousel */}
+      <div className="relative mt-14">
+        <button
+          onClick={() => scroll(-1)}
+          aria-label="Previous"
+          className="absolute left-2 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-brand-soft text-brand transition-colors hover:bg-brand hover:text-white lg:left-6"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+
+        <button
+          onClick={() => scroll(1)}
+          aria-label="Next"
+          className="absolute right-2 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-brand-soft text-brand transition-colors hover:bg-brand hover:text-white lg:right-6"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+
+        <div
+          ref={track}
+          className="flex snap-x snap-mandatory items-start justify-start gap-6 overflow-x-auto px-16 pb-8 pt-10 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
+        >
           {leaders.map((l, i) => (
-            <article key={l.name} className="card group overflow-hidden text-center">
+            <article
+              key={l.name}
+              data-card
+              className={`member-card w-[264px] shrink-0 snap-center bg-white shadow-[0_18px_40px_-28px_rgba(15,27,61,0.55)] transition-transform duration-300 hover:-translate-y-1 sm:w-[280px] ${
+                i % 2 === 1 ? "lg:-mt-10" : "lg:mt-10"
+              }`}
+            >
+              {/* Portrait block */}
               <div
-                className={`relative flex h-44 items-center justify-center bg-gradient-to-br ${tints[i % tints.length]}`}
+                className={`relative flex aspect-[5/4] items-center justify-center bg-gradient-to-br ${tints[i % tints.length]}`}
               >
                 <span className="absolute inset-0 opacity-25 [background-image:radial-gradient(rgba(255,255,255,0.5)_1.2px,transparent_1.2px)] [background-size:12px_12px]" />
-                <span className="relative grid h-20 w-20 place-items-center rounded-full border-2 border-white/50 font-display text-2xl font-extrabold text-white backdrop-blur-sm transition-transform duration-500 group-hover:scale-110">
+                <span className="relative grid h-20 w-20 place-items-center rounded-full border-2 border-white/50 font-display text-2xl font-extrabold text-white">
                   {initials(l.name)}
                 </span>
-              </div>
 
-              <div className="px-6 py-6">
-                <h3 className="text-[17px]">{l.name}</h3>
-                <p className="mt-1 font-display text-[13.5px] font-semibold uppercase tracking-wider text-brand">
-                  {l.role}
-                </p>
-                <p className="mt-1 text-[13.5px] text-slatey">{l.city}</p>
-
-                <div className="mt-5 flex justify-center gap-2 border-t border-hairline pt-5">
+                {/* Social row — revealed on hover */}
+                <div className="card-socials absolute inset-x-0 bottom-5 flex justify-center gap-2.5">
                   <a
                     href={`mailto:${l.email}`}
                     aria-label={`Email ${l.name}`}
-                    className="grid h-9 w-9 place-items-center rounded-md bg-mist text-navy transition-colors hover:bg-brand hover:text-white"
+                    className="social-icon grid h-10 w-10 place-items-center rounded-full bg-white text-brand shadow-md transition-colors hover:bg-brand hover:text-white"
                   >
                     <Mail className="h-4 w-4" />
                   </a>
                   <a
                     href={`tel:${l.phone.replace(/\s/g, "")}`}
                     aria-label={`Call ${l.name}`}
-                    className="grid h-9 w-9 place-items-center rounded-md bg-mist text-navy transition-colors hover:bg-brand hover:text-white"
+                    className="social-icon grid h-10 w-10 place-items-center rounded-full bg-white text-brand shadow-md transition-colors hover:bg-brand hover:text-white"
                   >
                     <Phone className="h-4 w-4" />
                   </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${l.name} on LinkedIn`}
+                    className="social-icon grid h-10 w-10 place-items-center rounded-full bg-white text-brand shadow-md transition-colors hover:bg-brand hover:text-white"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://x.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${l.name} on X`}
+                    className="social-icon grid h-10 w-10 place-items-center rounded-full bg-white text-brand shadow-md transition-colors hover:bg-brand hover:text-white"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </a>
                 </div>
+              </div>
+
+              {/* Caption */}
+              <div className="px-6 py-6">
+                <h3 className="min-h-[3.4rem] text-[19px] leading-snug">{l.name}</h3>
+                <p className="mt-1.5 text-[14.5px] text-slatey">{l.role}</p>
               </div>
             </article>
           ))}
         </div>
+      </div>
 
-        <div className="mt-12 text-center">
-          <Link href="/about/leadership" className="btn btn-outline">
-            View the full Governing Council
-          </Link>
-        </div>
+      <div className="shell mt-6 text-center">
+        <Link href="/about/office-bearers" className="btn btn-outline">
+          Office bearers &amp; committee members
+        </Link>
       </div>
     </section>
   );

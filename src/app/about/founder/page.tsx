@@ -65,17 +65,15 @@ export default function FounderPage() {
           {/* Portrait card */}
           <div className="lg:sticky lg:top-28">
             <div className="card overflow-hidden">
-              <div className="relative flex h-72 items-center justify-center bg-gradient-to-br from-navy to-navy-700">
-                <span className="absolute inset-0 opacity-20 [background-image:radial-gradient(rgba(255,255,255,0.6)_1.2px,transparent_1.2px)] [background-size:12px_12px]" />
-                <span className="relative h-48 w-48">
-                  <Image
-                    src="/aimo-logo-left.png"
-                    alt="Sir M. Visvesvaraya, founder of AIMO"
-                    fill
-                    sizes="192px"
-                    className="object-contain brightness-0 invert"
-                  />
-                </span>
+              <div className="relative flex h-72 items-center justify-center bg-mist p-8">
+                <span className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(var(--color-navy)_1.2px,transparent_1.2px)] [background-size:12px_12px]" />
+                <Image
+                  src="/aimo-logo-left.png"
+                  alt="All India Manufacturers' Organisation, founded by Bharat Ratna Sir M. Visvesvaraya in 1941"
+                  width={800}
+                  height={175}
+                  className="relative w-full max-w-[280px]"
+                />
               </div>
               <div className="p-7">
                 <h2 className="text-xl">Sir Mokshagundam Visvesvaraya</h2>

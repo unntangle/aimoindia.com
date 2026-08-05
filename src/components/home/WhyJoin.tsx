@@ -58,8 +58,8 @@ export default function WhyJoin() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/membership" className="btn btn-primary">
-              Register Now
+            <Link href="/membership/apply" className="btn btn-primary">
+              Become a Member
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link href="/contact" className="btn btn-outline">

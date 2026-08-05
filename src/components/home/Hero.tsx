@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Img from "@/components/ui/Img";
 import { heroSlides } from "@/lib/site";
 
@@ -29,7 +29,7 @@ export default function Hero() {
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
     >
-      {/* Slides */}
+      {/* ---------------------------- Slides ---------------------------- */}
       {heroSlides.map((slide, i) => (
         <div
           key={slide.title}
@@ -48,72 +48,64 @@ export default function Hero() {
               className="object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/88 to-navy/25" />
+
+          {/* Navy wash: opaque behind the copy, clearing to reveal the photo */}
+          <div className="absolute inset-0 bg-navy/60 lg:hidden" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-navy from-15% via-navy/75 via-50% to-transparent to-85% lg:block" />
         </div>
       ))}
 
-      {/* Angled brand panel, echoing the reference layout */}
-      <span className="absolute -right-24 top-0 hidden h-full w-[38%] skew-x-[-12deg] bg-brand/90 lg:block" />
-      <span className="absolute -right-24 top-0 hidden h-full w-[38%] skew-x-[-12deg] bg-[linear-gradient(135deg,rgba(255,255,255,0.14),transparent)] lg:block" />
+      {/* Organic brand shape anchored to the bottom-right corner */}
+      <span className="pointer-events-none absolute bottom-0 right-0 hidden h-[26%] w-[16%] rounded-tl-[100%] bg-brand md:block" />
 
-      {/* Copy */}
-      <div className="shell relative flex min-h-[560px] items-center py-20 lg:min-h-[660px]">
+      {/* ----------------------------- Copy ----------------------------- */}
+      <div className="shell relative z-10 flex min-h-[600px] items-center py-24 lg:min-h-[720px]">
         <div className="max-w-2xl">
           {heroSlides.map((slide, i) =>
             i === index ? (
               <div key={slide.title}>
                 <p className="eyebrow mb-4 fade-up text-brand-light">{slide.eyebrow}</p>
-                <h1 className="text-4xl text-white fade-up delay-1 sm:text-5xl lg:text-[3.4rem]">
+
+                <h1 className="fade-up delay-1 text-4xl italic text-white sm:text-5xl lg:text-[3.9rem] lg:leading-[1.1]">
                   {slide.title}
                 </h1>
-                <p className="mt-6 max-w-xl text-[16.5px] leading-relaxed text-white/75 fade-up delay-2">
+
+                <p className="mt-7 max-w-xl text-[16.5px] leading-relaxed text-white/75 fade-up delay-2">
                   {slide.body}
                 </p>
-                <div className="mt-9 flex flex-wrap gap-4 fade-up delay-3">
+
+                <div className="mt-10 flex flex-wrap gap-4 fade-up delay-3">
                   <Link href={slide.cta.href} className="btn btn-primary">
                     {slide.cta.label}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <Link href="/about" className="btn btn-ghost">
-                    Our Story Since 1941
-                  </Link>
+                  {slide.cta2 && (
+                    <Link href={slide.cta2.href} className="btn btn-ghost">
+                      {slide.cta2.label}
+                    </Link>
+                  )}
                 </div>
               </div>
             ) : null
           )}
-
-          {/* Dots */}
-          <div className="mt-12 flex items-center gap-3">
-            {heroSlides.map((s, i) => (
-              <button
-                key={s.title}
-                onClick={() => go(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`h-[5px] rounded-full transition-all duration-300 ${
-                  i === index ? "w-10 bg-brand" : "w-5 bg-white/35 hover:bg-white/60"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
 
-      {/* Arrows */}
-      <div className="absolute bottom-8 right-6 z-10 hidden gap-2 lg:flex">
-        <button
-          onClick={() => go(index - 1)}
-          aria-label="Previous slide"
-          className="grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition-colors hover:bg-white hover:text-navy"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => go(index + 1)}
-          aria-label="Next slide"
-          className="grid h-11 w-11 place-items-center rounded-md border border-white/40 text-white transition-colors hover:bg-white hover:text-navy"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
+      {/* --------------------------- Pagination --------------------------- */}
+      <div className="absolute bottom-9 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2">
+        {heroSlides.map((s, i) => (
+          <button
+            key={s.title}
+            onClick={() => go(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-current={i === index}
+            className={`h-[6px] rounded-full transition-all duration-300 ${
+              i === index
+                ? "w-9 bg-brand"
+                : "w-5 bg-white/40 hover:bg-white/70"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

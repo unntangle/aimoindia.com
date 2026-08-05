@@ -34,8 +34,8 @@ export default function FocusSectors() {
             ))}
           </div>
 
-          <Link href="/state-boards" className="btn btn-primary mt-9">
-            Find your State Board
+          <Link href="/about/tamil-nadu-state-board" className="btn btn-primary mt-9">
+            About the Tamil Nadu State Board
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

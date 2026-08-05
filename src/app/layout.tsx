@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollTop from "@/components/ui/ScrollTop";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );

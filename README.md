@@ -47,6 +47,48 @@ src/
 └─ lib/site.ts              ALL copy, contacts, people, events, tiers, images
 ```
 
+### Header logo lockup
+
+The header is two bands:
+
+1. **Masthead** (`bg-white`, scrolls away) — `aimo-logo-left.png` (portrait + wordmark) on the
+   left, `aimo-logo-right.png` (AIMO emblem) on the right, matching the organisation's
+   established letterhead lockup. Both are `h-11` on mobile, `h-[68px]` on desktop, with
+   `w-auto` so aspect ratio is preserved regardless of the source file's dimensions.
+2. **Navigation bar** (`sticky top-0`) — once the masthead scrolls past, a compact
+   emblem + "AIMO / SINCE 1941" mark fades in on the left so the brand is never absent.
+
+If you replace either PNG, update `WORDMARK` / `EMBLEM` in `components/layout/Header.tsx`
+to the new intrinsic pixel dimensions — these only fix the aspect ratio, not the rendered size.
+
+### Navigation structure
+
+The menu is defined entirely by the `nav` array in `src/lib/site.ts`:
+
+| Menu | Sub-items | Route |
+| --- | --- | --- |
+| Home | — | `/` |
+| Know AIMO | About AIMO | `/about` |
+| | Our Founder | `/about/founder` |
+| | About Tamil Nadu State Board | `/about/tamil-nadu-state-board` |
+| | Office Bearers & Committee Members | `/about/office-bearers` |
+| Membership | Why Join | `/membership` |
+| | Membership Categories | `/membership/categories` |
+| | Online Membership Form | `/membership/apply` |
+| Events & Awards | Upcoming Event | `/events` |
+| | Past Events | `/events/past` |
+| | Photo Gallery | `/gallery` |
+| | Awards | `/awards` |
+| Resources | Book Hall & Board Room | `/resources/book-hall` |
+| | Our Magazine | `/resources/magazine` |
+| | Internship Programme | `/resources/internship` |
+| Contact | — | `/contact` |
+| **[ Become a Member ]** | styled as a red button, visually distinct | `/membership/apply` |
+
+Two routes exist but are deliberately kept out of the main menu: `/press` (footer only) and
+`/state-boards` (the all-India board list, linked from contextual pages). `/about/leadership`
+is a permanent redirect to `/about/office-bearers` so old links keep working.
+
 ### Editing content
 
 **Do not edit JSX to change wording.** Almost every string on the site is exported from
@@ -100,9 +142,15 @@ The homepage mirrors the reference layout section for section:
 3. **Photography.** All imagery currently comes from Unsplash via `src/lib/site.ts`
    (`img` object). Replace the URLs with the client's own event and member-unit photos —
    this is the single biggest visual upgrade available.
-4. **Contact form.** `ContactForm.tsx` validates and shows a success state but is not
-   wired to a mail service. Connect a Next.js Route Handler, Formspree, Resend or similar.
+4. **Three forms are UI-only.** `ContactForm.tsx`, `MembershipForm.tsx` and
+   `HallEnquiryForm.tsx` all validate and show success states, but none is wired to a mail
+   service. Connect a Next.js Route Handler, Formspree, Resend or similar. The membership
+   form additionally needs a payment gateway if fees are to be collected online.
 5. **Newsletter.** Same — the form is UI-only; connect to Mailchimp/Brevo/etc.
+5b. **Hall booking rates, magazine issues, internship tracks and committee seats** are
+   plausible placeholders in `src/lib/site.ts` (`venues`, `magazine`, `internship`,
+   `committees`, `stateOfficeBearers`). Replace with the real figures and names —
+   the state office bearer slots are currently marked "To be announced".
 6. **Events, press, state boards.** Populated with realistic but illustrative entries.
    Replace with the real calendar, real press releases and the real board list plus
    office-bearer contacts.
