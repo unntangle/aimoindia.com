@@ -44,6 +44,11 @@ export const metadata: Metadata = {
     description: site.description,
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/aimo-logo-right.png", type: "image/png" }],
+    shortcut: [{ url: "/aimo-logo-right.png", type: "image/png" }],
+    apple: [{ url: "/aimo-logo-right.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

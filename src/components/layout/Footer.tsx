@@ -45,13 +45,13 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3">
-            <span className="relative h-12 w-12 shrink-0">
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-md bg-white p-1.5">
               <Image
                 src="/aimo-logo-right.png"
                 alt="AIMO emblem"
-                fill
-                sizes="48px"
-                className="object-contain brightness-0 invert"
+                width={263}
+                height={300}
+                className="h-full w-auto object-contain"
               />
             </span>
             <span className="font-display text-lg font-bold leading-tight text-white">
