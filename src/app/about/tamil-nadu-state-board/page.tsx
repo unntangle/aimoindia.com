@@ -37,7 +37,7 @@ export default function TamilNaduBoardPage() {
               Tamil Nadu carries one of the densest concentrations of small and medium
               manufacturing in the country. Auto ancillaries in Hosur, pumps and foundries
               in Coimbatore, knitwear in Tiruppur, light engineering across the Ambattur
-              and Chennai belts — each cluster has its own supply chain, its own buyers and
+              and Chennai belts. Each cluster has its own supply chain, its own buyers and
               its own version of the same three problems.
             </p>
 
@@ -49,8 +49,8 @@ export default function TamilNaduBoardPage() {
             </p>
 
             <p className="mt-4 text-[15.5px] leading-relaxed text-slatey">
-              Everything the Board does sits under the national mandate set in 1941 —{" "}
-              <strong className="text-navy">Prosperity through Industry</strong> — but the
+              Everything the Board does sits under the national mandate set in 1941,{" "}
+              <strong className="text-navy">Prosperity through Industry</strong>, but the
               agenda is set locally, by members who run units in this state.
             </p>
 

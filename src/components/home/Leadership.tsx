@@ -85,7 +85,7 @@ export default function Leadership() {
                   {initials(l.name)}
                 </span>
 
-                {/* Social row — revealed on hover */}
+                {/* Social row, revealed on hover */}
                 <div className="card-socials absolute inset-x-0 bottom-5 flex justify-center gap-2.5">
                   <a
                     href={`mailto:${l.email}`}

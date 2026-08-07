@@ -45,7 +45,7 @@ export default function WhyJoin() {
 
           <p className="mt-5 text-[15.5px] leading-relaxed text-slatey">
             Traditionally AIMO members have come from small, medium and large scale
-            industries across the country — engineering, chemicals, pharmaceuticals, food
+            industries across the country: engineering, chemicals, pharmaceuticals, food
             processing and services. More recently we have seen a marked surge of interest
             from start-ups and new-age entrepreneurs, who find in AIMO a credible support
             and a genuine voice for their concerns at the policy level.

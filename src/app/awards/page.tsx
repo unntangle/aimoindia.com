@@ -7,7 +7,7 @@ import { img, visvesvarayaAward } from "@/lib/site";
 export const metadata: Metadata = {
   title: "AIMO Awards",
   description:
-    "The Sir Visvesvaraya Industrial Award — presented each year by AIMO to an industry for excellent performance, with past recipients and the dignitaries who presented it.",
+    "The Sir Visvesvaraya Industrial Award, presented each year by AIMO to an industry for excellent performance, with past recipients and the dignitaries who presented it.",
 };
 
 export default function AwardsPage() {

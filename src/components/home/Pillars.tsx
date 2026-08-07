@@ -16,7 +16,7 @@ export default function Pillars() {
         <SectionHeading
           eyebrow="What AIMO Does"
           title="Three commitments we have kept for eight decades"
-          intro="Educate, evaluate, evolve — the working method behind every submission we file and every room we convene."
+          intro="Educate, evaluate, evolve: the working method behind every submission we file and every room we convene."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">

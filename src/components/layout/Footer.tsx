@@ -19,28 +19,21 @@ const socialLinks = [
 ];
 
 const quickLinks = [
+  { label: "Home", href: "/" },
   { label: "About AIMO", href: "/about" },
-  { label: "Our Founder", href: "/about#our-founder" },
-  { label: "Industry Representation", href: "/about#industry-representation" },
-  { label: "Government Relations", href: "/about#government-relations" },
-  { label: "Past Presidents", href: "/about#past-presidents" },
-  { label: "National Leadership Team", href: "/about#national-leadership" },
-  { label: "Tamil Nadu State Board", href: "/about/tamil-nadu-state-board" },
-  { label: "Office Bearers", href: "/about/office-bearers" },
+  { label: "State Boards", href: "/state-boards" },
+  { label: "Committee Members", href: "/about/office-bearers" },
+  { label: "Membership", href: "/membership" },
+  { label: "Become a Member", href: "/membership/apply" },
 ];
 
 const otherLinks = [
-  { label: "Membership", href: "/membership" },
-  { label: "Member Benefits", href: "/membership#benefits" },
-  { label: "Become a Member", href: "/membership/apply" },
   { label: "Upcoming Event", href: "/events" },
   { label: "Past Events", href: "/events/past" },
   { label: "Photo Gallery", href: "/gallery" },
   { label: "AIMO Awards", href: "/awards" },
-  { label: "Book Hall & Board Room", href: "/resources/book-hall" },
-  { label: "Our Magazine", href: "/resources/magazine" },
-  { label: "Internship Programme", href: "/resources/internship" },
-  { label: "Press Releases", href: "/press" },
+  { label: "Press Release", href: "/press" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -69,7 +62,7 @@ export default function Footer() {
 
           <p className="mt-5 text-[14.5px] leading-relaxed">
             The All India Manufacturers&rsquo; Organisation was founded by{" "}
-            {site.founder} with a single motto —{" "}
+            {site.founder} with a single motto,{" "}
             <span className="text-white">&ldquo;{site.tagline}&rdquo;</span>. Eight decades
             on, that remains the whole of our brief.
           </p>

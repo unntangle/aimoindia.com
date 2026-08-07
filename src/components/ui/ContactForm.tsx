@@ -124,7 +124,7 @@ export default function ContactForm() {
               value={form.message}
               onChange={set("message")}
               className={`${inputCls} resize-y`}
-              placeholder="Tell us briefly what you need — the more specific, the faster we can route it."
+              placeholder="Tell us briefly what you need. The more specific, the faster we can route it."
             />
           </Field>
         </div>

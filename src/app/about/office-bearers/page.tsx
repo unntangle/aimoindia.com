@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, Mail, MapPin, Phone, Users } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { committees, img, leaders, stateOfficeBearers } from "@/lib/site";
+import { gcMembers, img, leaders, stateOfficeBearers } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Office Bearers & Committee Members",
@@ -19,7 +18,7 @@ const tints = [
 ];
 
 function initials(name: string) {
-  if (name.toLowerCase().startsWith("to be")) return "—";
+  if (name.toLowerCase().startsWith("to be")) return "·";
   return name
     .replace(/^Shri\s+/i, "")
     .split(" ")
@@ -137,47 +136,62 @@ export default function OfficeBearersPage() {
         </div>
       </section>
 
-      {/* Committees */}
+      {/* National Governing Council */}
       <section className="py-20 lg:py-24">
         <div className="shell">
           <SectionHeading
-            eyebrow="Standing Committees"
-            title="Committee members"
-            intro="Committees meet monthly and report to the Board. Members in good standing may nominate themselves for a seat at the annual general meeting."
+            eyebrow="Governing Council"
+            title="National GC Members"
+            intro={gcMembers.intro}
           />
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {committees.map((c) => (
-              <div key={c.name} className="card group p-7">
-                <div className="flex items-start justify-between gap-4">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-soft text-brand transition-colors group-hover:bg-brand group-hover:text-white">
-                    <Users className="h-5 w-5" />
-                  </span>
-                  <span className="rounded-full bg-mist px-3 py-1 text-[12px] font-medium text-slatey">
-                    {c.seats} seats
-                  </span>
-                </div>
-                <h3 className="mt-5 text-[18px]">{c.name}</h3>
-                <p className="mt-2 text-[14.5px] leading-relaxed text-slatey">{c.brief}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-14 rounded-xl border border-hairline bg-mist p-8 text-center sm:p-10">
-            <h3 className="text-2xl">Interested in serving on a committee?</h3>
-            <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-slatey">
-              Committee seats are open to members in good standing. Nominations are taken at
-              the annual general meeting, and mid-term vacancies are filled by the Board.
-            </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn btn-primary">
-                Express interest
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/about/tamil-nadu-state-board" className="btn btn-outline">
-                About the State Board
-              </Link>
-            </div>
+          <div className="mt-14 overflow-x-auto rounded-xl border border-hairline">
+            <table className="w-full min-w-[760px] border-collapse text-left">
+              <thead>
+                <tr className="bg-navy text-white">
+                  <th className="px-4 py-3 font-display text-[13px] font-semibold">No</th>
+                  <th className="px-4 py-3 font-display text-[13px] font-semibold">Name</th>
+                  <th className="px-4 py-3 font-display text-[13px] font-semibold">
+                    Designation
+                  </th>
+                  <th className="px-4 py-3 font-display text-[13px] font-semibold">
+                    Mobile
+                  </th>
+                  <th className="px-4 py-3 font-display text-[13px] font-semibold">
+                    Email ID
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {gcMembers.members.map((m, i) => (
+                  <tr
+                    key={`${m.name}-${m.mobile}`}
+                    className="border-t border-hairline transition-colors hover:bg-mist"
+                  >
+                    <td className="px-4 py-3 text-[13.5px] text-slatey">{i + 1}</td>
+                    <td className="px-4 py-3 text-[14px] font-medium text-navy">
+                      {m.name}
+                    </td>
+                    <td className="px-4 py-3 text-[13.5px] text-slatey">
+                      {m.designation}
+                    </td>
+                    <td className="px-4 py-3 text-[13.5px] text-slatey">
+                      <a href={`tel:+91${m.mobile}`} className="hover:text-brand">
+                        {m.mobile}
+                      </a>
+                    </td>
+                    <td className="px-4 py-3 text-[13.5px]">
+                      <a
+                        href={`mailto:${m.email}`}
+                        className="break-all text-brand hover:underline"
+                      >
+                        {m.email}
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

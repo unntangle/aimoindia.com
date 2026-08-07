@@ -215,7 +215,7 @@ export default function MembershipForm() {
       </div>
 
       {/* Section 5 */}
-      <Legend n="05" title="Anything else" note="Optional — what you are hoping to get out of membership." />
+      <Legend n="05" title="Anything else" note="Optional. What you are hoping to get out of membership." />
       <Field label="Notes for the Secretariat" id="notes">
         <textarea id="notes" rows={4} value={form.notes} onChange={set("notes")} className={`${input} resize-y`} placeholder="We export to two markets and would value help with certification requirements." />
       </Field>
@@ -240,7 +240,7 @@ export default function MembershipForm() {
       </button>
       <p className="mt-4 text-[13px] text-slatey">
         The printed application downloads automatically once you submit. Payment
-        instructions are sent by email — do not transfer any fee before you receive them.
+        instructions are sent by email, so do not transfer any fee before you receive them.
       </p>
     </form>
   );

@@ -8,7 +8,7 @@ import { img } from "@/lib/site";
  * faded photograph so it stays distinct from the navy newsletter and footer.
  */
 export default function BecomeMemberCTA({
-  blurb = "Policy representation, credit clinics, research access and industry recognition — since 1941.",
+  blurb = "Policy representation, credit clinics, research access and industry recognition, since 1941.",
 }: {
   blurb?: string;
 }) {

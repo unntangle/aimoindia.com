@@ -27,7 +27,7 @@ export default function Newsletter() {
         {done ? (
           <p className="flex items-center gap-3 rounded-lg bg-white/10 px-6 py-4 text-[15px] text-white">
             <Check className="h-5 w-5 text-brand-light" />
-            Thank you — please confirm via the email we just sent.
+            Thank you. Please confirm via the email we just sent.
           </p>
         ) : (
           <form

@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
    Central content layer for aimoindia.com
-   Editing copy, contacts, events or people? Do it here — not in JSX.
+   Editing copy, contacts, events or people? Do it here, not in JSX.
 ------------------------------------------------------------------- */
 
 const U = (id: string, w = 1600) =>
@@ -44,7 +44,7 @@ export const site = {
   founded: 1941,
   founder: "Bharat Ratna Sir M. Visvesvaraya",
   description:
-    "AIMO is the leading voice of Indian industry — a national body of Micro, Small and Medium Enterprises founded by Bharat Ratna Sir M. Visvesvaraya in 1941.",
+    "AIMO is the leading voice of Indian industry, a national body of Micro, Small and Medium Enterprises founded by Bharat Ratna Sir M. Visvesvaraya in 1941.",
   url: "https://www.aimoindia.com",
 };
 
@@ -110,7 +110,7 @@ export const heroSlides = [
   {
     eyebrow: "Upcoming · 19–20 November 2026",
     title: "AIMO National Manufacturing Summit",
-    body: "Two days on the questions that will decide the next decade of Indian manufacturing — export competitiveness, credit beyond collateral, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters at the Nehru Centre, Mumbai.",
+    body: "Two days on the questions that will decide the next decade of Indian manufacturing: export competitiveness, credit beyond collateral, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters at the Nehru Centre, Mumbai.",
     image: img.summitCrowd,
     cta: { label: "View Event Details", href: "/events" },
     cta2: { label: "Past Events", href: "/events/past" },
@@ -119,7 +119,7 @@ export const heroSlides = [
   {
     eyebrow: "Why Become an AIMO Member?",
     title: "A Smaller Enterprise Gets a Louder Voice",
-    body: "One promoter with a grievance is noise. Two hundred units with the same objection and the numbers to back it is a sector position — and that is what changes a rule. Policy representation, credit clinics, research and recognition, since 1941.",
+    body: "One promoter with a grievance is noise. Two hundred units with the same objection and the numbers to back it is a sector position, and that is what changes a rule. Policy representation, credit clinics, research and recognition, since 1941.",
     image: img.networking,
     cta: { label: "Why Join AIMO", href: "/membership" },
     cta2: { label: "Become a Member", href: "/membership/apply" },
@@ -128,7 +128,7 @@ export const heroSlides = [
   {
     eyebrow: "Book Hall & Board Room",
     title: "Your Next Meeting, at the AIMO Premises",
-    body: "A 120-seat conference hall, an 18-seat board room and a 40-seat training room in the heart of Fort, Mumbai — fully equipped, air-conditioned, and available at substantially reduced rates for members.",
+    body: "A 120-seat conference hall, an 18-seat board room and a 40-seat training room in the heart of Fort, Mumbai: fully equipped, air-conditioned, and available at substantially reduced rates for members.",
     image: img.conferenceHall,
     cta: { label: "Check Availability", href: "/resources/book-hall" },
     cta2: { label: "See the Spaces", href: "/resources/book-hall#spaces" },
@@ -150,7 +150,7 @@ export const pillars = [
     icon: "chart",
     title: "Evaluate",
     subtitle: "The Global Situation",
-    body: "Original research, member surveys and trade data — so that when AIMO speaks to government, it speaks with evidence rather than anecdote.",
+    body: "Original research, member surveys and trade data, so that when AIMO speaks to government, it speaks with evidence rather than anecdote.",
     href: "/press",
   },
   {
@@ -166,7 +166,7 @@ export const pillars = [
 
 export const stats = [
   { value: "51 Mn", label: "MSME units across India" },
-  { value: "117 Mn", label: "People employed — 40% of the workforce" },
+  { value: "117 Mn", label: "People employed, 40% of the workforce" },
   { value: "37%", label: "Share of national GDP" },
   { value: "43%", label: "Of India's total exports" },
 ];
@@ -372,7 +372,7 @@ export const pastPresidents = [
 
 export const gcMembers = {
   intro:
-    "The National Governing Council comprises leaders of trade and industry — a mix of youthful energy and experienced leadership. The NGC meets on a regular basis across the country to decide the framework and plan of action for the Leadership Team at AIMO India.",
+    "The National Governing Council comprises leaders of trade and industry, a mix of youthful energy and experienced leadership. The NGC meets on a regular basis across the country to decide the framework and plan of action for the Leadership Team at AIMO India.",
   members: [
     { name: "Sushil Vyas", designation: "President", mobile: "9320707999", email: "vyassushil46@gmail.com" },
     { name: "Harish Metha", designation: "Senior Vice President", mobile: "9444440428", email: "metha.group@gmail.com" },
@@ -472,28 +472,28 @@ export const immediatePastTeam = [
     email: "treasurer@aimoindia.com",
   },
   {
-    role: "Zonal Vice President — East",
+    role: "Zonal Vice President, East",
     name: "B. P. Bakshi",
     org: "Director, Barak Valley Cement Ltd, Assam",
     mobile: "+91 94353 35346",
     email: "bp.bakshi@rediffmail.com",
   },
   {
-    role: "Zonal Vice President — West",
+    role: "Zonal Vice President, West",
     name: "Shrikant Dalmia",
     org: "",
     mobile: "+91 98200 04802",
     email: "dalmiashrikant@gmail.com",
   },
   {
-    role: "Zonal Vice President — South",
+    role: "Zonal Vice President, South",
     name: "K. C. Jagannath Reddy",
     org: "",
     mobile: "+91 98440 06641",
     email: "kcjreddy9@gmail.com",
   },
   {
-    role: "Zonal Vice President — North",
+    role: "Zonal Vice President, North",
     name: "M. L. Sharma",
     org: "",
     mobile: "+91 98688 28358",
@@ -705,7 +705,7 @@ export const enrolSteps = [
   {
     step: "04",
     title: "Choose membership category",
-    body: "Associate, Corporate or Patron — based on the scale of your enterprise.",
+    body: "Associate, Corporate or Patron, based on the scale of your enterprise.",
   },
   {
     step: "05",
@@ -799,7 +799,7 @@ export const stateBoards: {
 /* ------------------------------ Past events ----------------------------- */
 
 /** Event posters/flyers shown on the Past Events page. Add new files to
-    /public and list them here — the grid and lightbox pick them up. */
+    /public and list them here. The grid and lightbox pick them up. */
 export const pastEventPosters = [
   {
     src: "/past-event.png",
@@ -813,7 +813,7 @@ export const pastEventPosters = [
 export const visvesvarayaAward = {
   title: "Sir Visvesvaraya Industrial Award",
   intro: [
-    "It is significant to mention that India's first ever World Trade Centre, Mumbai — named after Dr. M. Visvesvaraya as the M. Visvesvaraya Industrial Research & Development Centre (MVIRDC in short) — is the outcome of the initiative taken by AIMO.",
+    "It is significant to mention that India's first ever World Trade Centre, Mumbai, named after Dr. M. Visvesvaraya as the M. Visvesvaraya Industrial Research & Development Centre (MVIRDC in short), is the outcome of the initiative taken by AIMO.",
     "Every year we identify an industry for its excellent performance and present it with the Sir Visvesvaraya Industrial Award. In the past we have given this award to organisations like:",
   ],
   recipients: [
@@ -822,13 +822,13 @@ export const visvesvarayaAward = {
     "Ashok Leyland Ltd.",
     "MRF Ltd.",
     "S I Viscose Ltd",
-    "Madras Refineries Ltd — Public Sector",
+    "Madras Refineries Ltd (Public Sector)",
     "Sundaram Fasteners Ltd.",
-    "Bharat Heavy Electricals Ltd — Public Sector",
+    "Bharat Heavy Electricals Ltd (Public Sector)",
     "Lakshmi Machine Works Ltd.",
-    "Neyvelli Lignite Corpn. Ltd — Public Sector",
+    "Neyvelli Lignite Corpn. Ltd (Public Sector)",
     "Tamil Nadu Petroproducts Ltd.",
-    "Hindustan Teleprinters Ltd — Public Sector",
+    "Hindustan Teleprinters Ltd (Public Sector)",
     "Chemfab Alkalies Ltd.",
     "Madras Cements Ltd.",
     "India Pistons Ltd.",
@@ -1048,7 +1048,7 @@ export const sectors = [
 /* ------------------------------- Gallery -------------------------------- */
 
 /** Photo gallery, grouped by event. Drop new files into /public and add them
-    to the relevant album — the gallery page and lightbox pick them up. */
+    to the relevant album. The gallery page and lightbox pick them up. */
 export const galleryAlbums = [
   {
     title: "Engineers Day Celebration 2023",
@@ -1209,7 +1209,7 @@ export const magazine = {
   name: "AIMO Industry Review",
   cadence: "Quarterly",
   intro:
-    "A quarterly journal written largely by members, for members — case notes from the shop floor, scheme explainers, and the arguments AIMO is currently making in public.",
+    "A quarterly journal written largely by members, for members: case notes from the shop floor, scheme explainers, and the arguments AIMO is currently making in public.",
   sections: [
     "Cover story on a policy question facing the sector",
     "Member profile: one enterprise, examined properly",
@@ -1246,7 +1246,7 @@ export const magazine = {
 
 export const internship = {
   intro:
-    "AIMO places engineering, management and polytechnic students into member enterprises for structured internships — real shop-floor and back-office work, supervised, with a written assessment at the end.",
+    "AIMO places engineering, management and polytechnic students into member enterprises for structured internships: real shop-floor and back-office work, supervised, with a written assessment at the end.",
   duration: "4 to 12 weeks · Summer and winter cycles",
   tracks: [
     {

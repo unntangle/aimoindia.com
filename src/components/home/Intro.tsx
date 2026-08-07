@@ -15,13 +15,13 @@ export default function Intro() {
 
           <p className="mt-6 text-[15.5px] leading-relaxed text-slatey">
             The purpose of AIMO is to encourage dialogue and partnership among the many
-            stakeholders of the MSME ecosystem — promoting innovation and knowledge sharing
+            stakeholders of the MSME ecosystem, promoting innovation and knowledge sharing
             on the issues that decide whether a small enterprise survives its next quarter.
           </p>
 
           <p className="mt-4 text-[15.5px] leading-relaxed text-slatey">
             Schemes are announced with real intent. They fail, when they fail, in the last
-            mile — in the gap between a notification in Delhi and a promoter in Hosur who
+            mile, in the gap between a notification in Delhi and a promoter in Hosur who
             has never heard of it, or cannot assemble the paperwork. Closing that gap is
             most of what we do. Our national footprint covers micro, small and medium
             enterprises across manufacturing and the services sector, which remains the

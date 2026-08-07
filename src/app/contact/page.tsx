@@ -10,7 +10,7 @@ import { contact, img } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach the AIMO National Secretariat in Mumbai — membership, partnership, press and event enquiries.",
+    "Reach the AIMO National Secretariat in Mumbai for membership, partnership, press and event enquiries.",
 };
 
 export default function ContactPage() {
@@ -23,7 +23,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get In Touch"
         title="Contact the National Secretariat"
-        intro="Membership, partnership, press or events — write to us and we will route your enquiry to the right desk or State Board."
+        intro="Membership, partnership, press or events: write to us and we will route your enquiry to the right desk or State Board."
         image={img.mumbai}
         crumb="Contact"
       />

@@ -55,7 +55,7 @@ export default function InternshipPage() {
             <p className="mt-6 text-[15.5px] leading-relaxed text-slatey">
               Students finish good technical courses without ever having stood on a working
               shop floor. Member units, meanwhile, need capable hands for well-defined
-              projects they never get around to — the process that is still on paper, the
+              projects they never get around to: the process that is still on paper, the
               dashboard nobody has built, the audit trail that lives in one person&rsquo;s head.
             </p>
             <p className="mt-4 text-[15.5px] leading-relaxed text-slatey">
@@ -84,7 +84,7 @@ export default function InternshipPage() {
           <SectionHeading
             eyebrow="Tracks"
             title="Four routes through a member enterprise"
-            intro="You are matched to a track and then to a unit — not the other way round, so the placement fits what you are studying."
+            intro="You are matched to a track and then to a unit, not the other way round, so the placement fits what you are studying."
           />
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2">

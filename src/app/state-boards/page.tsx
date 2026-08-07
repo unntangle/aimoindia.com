@@ -17,7 +17,7 @@ export default function StateBoardsPage() {
       <PageHero
         eyebrow="Our Network"
         title="State Boards"
-        intro="AIMO is federal by design. Your membership relationship sits with the board closest to your unit — not with a distant head office."
+        intro="AIMO is federal by design. Your membership relationship sits with the board closest to your unit, not with a distant head office."
         image={img.india}
         crumb="State Boards"
       />

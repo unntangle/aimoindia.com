@@ -9,7 +9,7 @@ import { contact, img, mediaCoverage } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Press Release",
   description:
-    "AIMO in the media — coverage of the organisation and of Indian MSMEs in Reuters, Nasdaq, The Times of India, Business Today and elsewhere.",
+    "AIMO in the media: coverage of the organisation and of Indian MSMEs in Reuters, Nasdaq, The Times of India, Business Today and elsewhere.",
 };
 
 export default function PressPage() {

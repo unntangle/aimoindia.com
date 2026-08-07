@@ -12,7 +12,7 @@ export default function EventsSchedule() {
           eyebrow="AIMO Calendar"
           tone="dark"
           title="Where the membership meets"
-          intro="Conclaves, clinics, factory visits and award nights — held across the states rather than only in the metros."
+          intro="Conclaves, clinics, factory visits and award nights, held across the states rather than only in the metros."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2">

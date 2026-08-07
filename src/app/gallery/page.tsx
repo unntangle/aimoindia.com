@@ -7,7 +7,7 @@ import { galleryAlbums, img } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Glimpses of AIMO events — photographs from conferences, celebrations and chapter gatherings across India.",
+    "Glimpses of AIMO events: photographs from conferences, celebrations and chapter gatherings across India.",
 };
 
 export default function GalleryPage() {
@@ -47,7 +47,7 @@ export default function GalleryPage() {
         </section>
       ))}
 
-      <BecomeMemberCTA blurb="Join the manufacturers who meet at gatherings like these — policy representation, credit clinics, research access and industry recognition, since 1941." />
+      <BecomeMemberCTA blurb="Join the manufacturers who meet at gatherings like these: policy representation, credit clinics, research access and industry recognition, since 1941." />
     </>
   );
 }

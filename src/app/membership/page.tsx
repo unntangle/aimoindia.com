@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "Membership",
   description:
-    "Why manufacturers join the All India Manufacturers' Organisation — member benefits and how to enrol.",
+    "Why manufacturers join the All India Manufacturers' Organisation: member benefits and how to enrol.",
 };
 
 const iconMap = {
@@ -68,7 +68,7 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="Membership"
         title="Membership"
-        intro="A smaller organisation gets a louder voice by standing with others. That is the whole proposition — everything below is a consequence of it."
+        intro="A smaller organisation gets a louder voice by standing with others. That is the whole proposition, and everything below is a consequence of it."
         image={img.officeTeam}
         crumb="Membership"
       />
@@ -89,7 +89,7 @@ export default function MembershipPage() {
 
             <p className="mt-6 text-[15.5px] leading-relaxed text-slatey">
               Most promoters have had the experience of raising a legitimate problem and
-              watching it go nowhere — not because anyone opposed it, but because a single
+              watching it go nowhere, not because anyone opposed it, but because a single
               enterprise is not a constituency. An individual complaint is noise; a
               documented sector position is evidence. What changes the outcome is the same
               objection, from two hundred units, with numbers attached, filed inside the
@@ -97,7 +97,7 @@ export default function MembershipPage() {
             </p>
             <p className="mt-4 text-[15.5px] leading-relaxed text-slatey">
               Traditionally AIMO members have come from small, medium and large scale
-              industries across the country — engineering, chemicals, pharmaceuticals, food
+              industries across the country: engineering, chemicals, pharmaceuticals, food
               processing and services. More recently we have seen a marked surge of interest
               from start-ups and new-age entrepreneurs, who find in AIMO a credible support
               and a genuine voice for their concerns at the policy level.
@@ -150,7 +150,7 @@ export default function MembershipPage() {
           <SectionHeading
             eyebrow="Member Benefits"
             title={membershipLead}
-            intro="Not a logo for your letterhead — a set of working relationships you can call on when something goes wrong."
+            intro="Not a logo for your letterhead, but a set of working relationships you can call on when something goes wrong."
           />
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -220,7 +220,7 @@ export default function MembershipPage() {
               <h3 className="text-xl text-white">Ready to join?</h3>
               <p className="mt-3 text-[14.5px] leading-relaxed text-white/65">
                 Fill in the membership form and the printed AIMO application downloads
-                automatically once you submit — sign it and send the hard copy to your
+                automatically once you submit. Sign it and send the hard copy to your
                 State Board.
               </p>
 

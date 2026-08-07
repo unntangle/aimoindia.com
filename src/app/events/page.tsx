@@ -73,7 +73,7 @@ export default function EventsPage() {
       <PageHero
         eyebrow="AIMO Calendar"
         title="Upcoming Event"
-        intro="Conclaves, clinics, workshops and factory visits — deliberately held across the states rather than only in the metros."
+        intro="Conclaves, clinics, workshops and factory visits, deliberately held across the states rather than only in the metros."
         image={img.lectureHall}
         crumb="Events"
       />

@@ -10,7 +10,7 @@ import { contact, img, magazine } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our Magazine",
   description:
-    "AIMO Industry Review — a quarterly journal written by members, for members. Case notes from the shop floor, scheme explainers and policy analysis.",
+    "AIMO Industry Review, a quarterly journal written by members, for members. Case notes from the shop floor, scheme explainers and policy analysis.",
 };
 
 export default function MagazinePage() {
@@ -35,7 +35,7 @@ export default function MagazinePage() {
             <p className="mt-6 text-[15.5px] leading-relaxed text-slatey">
               Most trade publications describe the sector from outside. The Industry Review
               is assembled from the other direction: a member works through a problem, and
-              the write-up is the record of how it went — including the parts that did not
+              the write-up is the record of how it went, including the parts that did not
               work.
             </p>
 
@@ -140,10 +140,10 @@ export default function MagazinePage() {
             </span>
             <h3 className="mt-5 text-2xl">Write for the Review</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-slatey">
-              If you have solved something on your shop floor — a quality problem, an energy
-              bill, a certification you thought was out of reach — that is exactly the
-              material we want. You do not need to be a writer; the editorial committee will
-              work with you on the draft.
+              If you have solved something on your shop floor, whether a quality problem, an
+              energy bill, or a certification you thought was out of reach, that is exactly
+              the material we want. You do not need to be a writer; the editorial committee
+              will work with you on the draft.
             </p>
             <p className="mt-3 text-[14px] text-slatey">
               Typical length 900–1,400 words. Photographs from your unit are welcome.

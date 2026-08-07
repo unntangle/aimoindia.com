@@ -17,7 +17,7 @@ export default function ApplyPage() {
       <PageHero
         eyebrow="Membership"
         title="Become a Member"
-        intro="Fill this in once and the Secretariat routes it to your State Board. The printed application downloads automatically when you submit — nothing is charged at this stage."
+        intro="Fill this in once and the Secretariat routes it to your State Board. The printed application downloads automatically when you submit, and nothing is charged at this stage."
         image={img.notes}
         crumb="Become a Member"
       />
@@ -37,7 +37,7 @@ export default function ApplyPage() {
                   "The printed membership form downloads as soon as you submit.",
                   "We acknowledge your application by email within two working days.",
                   "Your State Board reviews the details and may call to clarify.",
-                  "Payment instructions are sent — RTGS or the online gateway.",
+                  "Payment instructions are sent, by RTGS or the online gateway.",
                   "The National Governing Council ratifies the approval.",
                   "You receive your membership number and docket.",
                 ].map((s, i) => (
@@ -68,7 +68,7 @@ export default function ApplyPage() {
               <h3 className="mt-4 text-[18px] text-white">Need help?</h3>
               <p className="mt-3 text-[14px] leading-relaxed text-white/65">
                 Unsure which category or chapter applies to you? Call or write before you
-                fill the form — it is quicker than correcting it later.
+                fill the form. It is quicker than correcting it later.
               </p>
               <a
                 href={`mailto:${contact.emails[0]}`}

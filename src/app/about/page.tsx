@@ -75,7 +75,7 @@ const milestones = [
   },
 ];
 
-/* Local section header — the About page stacks many sections in one column. */
+/* Local section header. The About page stacks many sections in one column. */
 function SectionTitle({
   eyebrow,
   title,
@@ -103,7 +103,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Who We Are"
         title="Eight decades of speaking for Indian industry"
-        intro="AIMO was founded in 1941 and has represented manufacturers through every phase of the Indian economy since — from the licence era to liberalisation to the digital shop floor."
+        intro="AIMO was founded in 1941 and has represented manufacturers through every phase of the Indian economy since, from the licence era to liberalisation to the digital shop floor."
         image={img.boardroom}
         crumb="About"
       />
@@ -196,7 +196,7 @@ export default function AboutPage() {
                     Prosperity through Industry
                   </p>
                   <p className="mt-3 text-[14.5px] leading-relaxed text-white/65">
-                    Set down at the founding in 1941 and never revised — because the
+                    Set down at the founding in 1941 and never revised, because the
                     argument it makes has not needed revising.
                   </p>
                 </div>
@@ -270,8 +270,8 @@ export default function AboutPage() {
                   six decades observing what actually stopped Indian enterprise: not a
                   shortage of ambition, but fragmentation. Individual manufacturers had
                   grievances; nobody had a hearing. The organisation he created was a
-                  remedy for that specific problem, and its motto —{" "}
-                  <strong className="text-navy">Prosperity through Industry</strong> — is a
+                  remedy for that specific problem, and its motto,{" "}
+                  <strong className="text-navy">Prosperity through Industry</strong>, is a
                   compressed version of the argument he had been making his whole working
                   life.
                 </p>
@@ -282,7 +282,7 @@ export default function AboutPage() {
                     Industrialise or perish.
                   </blockquote>
                   <figcaption className="mt-3 text-[14px] text-slatey">
-                    The phrase most associated with him — and, in substance, the founding
+                    The phrase most associated with him, and, in substance, the founding
                     brief of this organisation.
                   </figcaption>
                 </figure>
