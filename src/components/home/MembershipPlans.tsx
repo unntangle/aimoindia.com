@@ -64,8 +64,8 @@ export default function MembershipPlans() {
         <p className="mt-8 text-center text-[13px] text-slatey">
           Fees shown are indicative annual subscriptions. Final rates are confirmed by
           your State Board at the time of enrolment.{" "}
-          <Link href="/membership/categories" className="font-medium text-brand">
-            Compare categories in full
+          <Link href="/membership" className="font-medium text-brand">
+            More about membership
           </Link>
           .
         </p>

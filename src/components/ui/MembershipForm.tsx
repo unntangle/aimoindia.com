@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Send } from "lucide-react";
-import { membershipTiers, stateBoards } from "@/lib/site";
+import { Check, Download, Send } from "lucide-react";
+import { membershipFormPdf, membershipTiers, stateBoards } from "@/lib/site";
 
 const sectorOptions = [
   "Engineering & Machine Tools",
@@ -20,7 +20,8 @@ const scaleOptions = ["Micro", "Small", "Medium", "Large"];
 
 const empty = {
   category: membershipTiers[1].name,
-  board: stateBoards[1].state,
+  board:
+    stateBoards.find((b) => b.state === "Tamil Nadu")?.state ?? stateBoards[0].state,
   enterprise: "",
   gstin: "",
   udyam: "",
@@ -44,6 +45,16 @@ export default function MembershipForm() {
   const [form, setForm] = useState(empty);
   const [sent, setSent] = useState(false);
 
+  /** Pull the printed application down as soon as the form is submitted. */
+  const downloadForm = () => {
+    const a = document.createElement("a");
+    a.href = membershipFormPdf;
+    a.download = "AIMO-membership-form.pdf";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
   const set =
     (k: keyof typeof form) =>
     (
@@ -64,13 +75,23 @@ export default function MembershipForm() {
         <span className="grid h-14 w-14 place-items-center rounded-full bg-brand-soft text-brand">
           <Check className="h-7 w-7" strokeWidth={2.5} />
         </span>
-        <h3 className="mt-5 text-2xl">Application captured</h3>
+        <h3 className="mt-5 text-2xl">Application submitted</h3>
         <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-slatey">
           Thank you, {form.contactName || "and welcome"}. Your application for{" "}
           <strong className="text-navy">{form.category}</strong> membership under the{" "}
           <strong className="text-navy">{form.board}</strong> board has been recorded.
         </p>
-        <p className="mt-3 max-w-lg text-[14px] leading-relaxed text-slatey">
+        <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-slatey">
+          The printed AIMO membership form has started downloading. Sign it and send the
+          hard copy to your State Board along with proof of payment.
+        </p>
+
+        <a href={membershipFormPdf} download className="btn btn-primary mt-7">
+          <Download className="h-4 w-4" />
+          Download didn&rsquo;t start? Get the form
+        </a>
+
+        <p className="mt-6 max-w-lg text-[13.5px] leading-relaxed text-slatey">
           This demo form is not yet connected to a mail service or payment gateway. Wire it
           to your handler, or send the same details to{" "}
           <a href="mailto:gs@aimoindia.com" className="font-medium text-brand">
@@ -83,7 +104,7 @@ export default function MembershipForm() {
             setForm(empty);
             setSent(false);
           }}
-          className="btn btn-outline mt-7"
+          className="btn btn-outline mt-6"
         >
           Submit another application
         </button>
@@ -96,6 +117,7 @@ export default function MembershipForm() {
       onSubmit={(e) => {
         e.preventDefault();
         setSent(true);
+        downloadForm();
       }}
       className="card p-8 sm:p-10"
     >
@@ -213,12 +235,12 @@ export default function MembershipForm() {
       </label>
 
       <button type="submit" className="btn btn-primary mt-8 w-full sm:w-auto">
-        Submit application
+        Submit &amp; download membership form
         <Send className="h-4 w-4" />
       </button>
       <p className="mt-4 text-[13px] text-slatey">
-        Payment instructions are sent by email once the application is received. Do not
-        transfer any fee before you receive them.
+        The printed application downloads automatically once you submit. Payment
+        instructions are sent by email — do not transfer any fee before you receive them.
       </p>
     </form>
   );

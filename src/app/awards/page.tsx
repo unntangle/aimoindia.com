@@ -1,150 +1,100 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, Trophy } from "lucide-react";
+import { Award, Trophy } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Img from "@/components/ui/Img";
-import Newsletter from "@/components/home/Newsletter";
-import { awardCategories, img } from "@/lib/site";
+import BecomeMemberCTA from "@/components/ui/BecomeMemberCTA";
+import { img, visvesvarayaAward } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "AIMO Awards",
   description:
-    "The AIMO Awards recognise members who have set the standard in manufacturing excellence, exports, sustainability, digital adoption and entrepreneurship.",
+    "The Sir Visvesvaraya Industrial Award — presented each year by AIMO to an industry for excellent performance, with past recipients and the dignitaries who presented it.",
 };
-
-const criteria = [
-  {
-    n: "01",
-    t: "Nomination",
-    b: "Members nominate themselves or a peer through their State Board. Nominations open each August.",
-  },
-  {
-    n: "02",
-    t: "Documentation",
-    b: "Audited financials, employment data and a short written case covering the assessment year.",
-  },
-  {
-    n: "03",
-    t: "Jury review",
-    b: "An independent jury of industrialists, academics and former officials shortlists across categories.",
-  },
-  {
-    n: "04",
-    t: "Site verification",
-    b: "Shortlisted units receive a visit. Claims about process or sustainability are checked on the floor.",
-  },
-];
 
 export default function AwardsPage() {
   return (
     <>
       <PageHero
         eyebrow="Recognition"
-        title="The AIMO Awards"
-        intro="We reward performing and active members with industry recognition and media exposure — judged on evidence, verified on site."
+        title="AIMO Awards"
+        intro="Every year we identify an industry for its excellent performance and present it with the Sir Visvesvaraya Industrial Award."
         image={img.awards}
         crumb="AIMO Awards"
       />
 
-      {/* Categories */}
+      {/* Award */}
       <section className="py-20 lg:py-24">
         <div className="shell">
-          <SectionHeading
-            eyebrow="Categories"
-            title="Six awards, six different kinds of achievement"
-            intro="Categories are reviewed each year so that the awards keep pace with what the sector is actually contending with."
-          />
+          <div className="max-w-3xl">
+            <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand text-white">
+              <Trophy className="h-5 w-5" />
+            </span>
+            <h2 className="mt-5 text-3xl sm:text-4xl">{visvesvarayaAward.title}</h2>
+            <span className="mt-5 block h-[3px] w-14 rounded-full bg-brand" />
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {awardCategories.map((a, i) => (
-              <article key={a.title} className="card group relative overflow-hidden p-8">
-                <span className="absolute right-0 top-0 h-20 w-20 translate-x-6 -translate-y-6 rounded-full bg-brand-soft transition-transform duration-500 group-hover:scale-[2.4]" />
-                <span className="relative grid h-12 w-12 place-items-center rounded-xl bg-brand text-white">
-                  <Trophy className="h-5 w-5" />
-                </span>
-                <p className="relative mt-5 font-display text-[12.5px] font-semibold uppercase tracking-widest text-brand">
-                  Category {String(i + 1).padStart(2, "0")}
-                </p>
-                <h3 className="relative mt-1.5 text-[19px]">{a.title}</h3>
-                <p className="relative mt-3 text-[14.5px] leading-relaxed text-slatey">
-                  {a.body}
-                </p>
-              </article>
+            {visvesvarayaAward.intro.map((p) => (
+              <p
+                key={p.slice(0, 24)}
+                className="mt-5 text-[15.5px] leading-relaxed text-slatey"
+              >
+                {p}
+              </p>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Process */}
-      <section className="bg-navy py-20 lg:py-24">
-        <div className="shell">
-          <SectionHeading
-            tone="dark"
-            eyebrow="How Winners Are Chosen"
-            title="An award is only worth the scrutiny behind it"
-            intro="Every stage is documented, and unsuccessful nominees receive the jury's reasoning on request."
-          />
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {criteria.map((c) => (
+          {/* Recipients */}
+          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {visvesvarayaAward.recipients.map((r, i) => (
               <div
-                key={c.n}
-                className="group rounded-xl border border-white/10 bg-white/5 p-7 transition-colors hover:border-brand/40 hover:bg-white/10"
+                key={r}
+                className="flex items-center gap-3 rounded-lg border border-hairline bg-white px-4 py-3.5 transition-all hover:border-brand hover:bg-brand-soft"
               >
-                <span className="font-display text-3xl font-extrabold text-brand">
-                  {c.n}
+                <span className="font-display text-[12px] font-bold text-brand">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-3 text-[18px] text-white">{c.t}</h3>
-                <p className="mt-2.5 text-[14px] leading-relaxed text-white/60">{c.b}</p>
+                <span className="text-[14.5px] leading-snug text-navy">{r}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 lg:py-24">
-        <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-            <Img
-              src={img.speaker}
-              alt="AIMO Awards presentation"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              seed="awards-cta"
-              className="object-cover"
-            />
-          </div>
+      {/* Presented by */}
+      <section className="border-y border-hairline bg-mist py-20 lg:py-24">
+        <div className="shell">
+          <p className="eyebrow mb-3">Presented By</p>
+          <h2 className="max-w-3xl text-3xl sm:text-4xl">
+            In the presence of renowned personalities
+          </h2>
+          <span className="mt-5 block h-[3px] w-14 rounded-full bg-brand" />
+          <p className="mt-5 max-w-3xl text-[15.5px] leading-relaxed text-slatey">
+            {visvesvarayaAward.presentersLead}
+          </p>
 
-          <div>
-            <p className="eyebrow mb-3">Nominations</p>
-            <h2 className="text-3xl sm:text-4xl">
-              Nominations for the 2026 cycle open in August
-            </h2>
-            <p className="mt-5 text-[15.5px] leading-relaxed text-slatey">
-              Eligibility is straightforward: you must be a member in good standing in the
-              Corporate or Patron category, with at least two completed financial years of
-              operation. Associate members can nominate a peer.
-            </p>
-            <p className="mt-4 text-[15.5px] leading-relaxed text-slatey">
-              Winners are announced at the AIMO Awards night held alongside the National
-              Manufacturing Summit, and are featured across our press platform through the
-              following year.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="btn btn-primary">
-                Register a nomination
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href="/membership" className="btn btn-outline">
-                Check eligibility
-              </Link>
-            </div>
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            {visvesvarayaAward.presenters.map((p) => (
+              <article
+                key={`${p.name}-${p.body.slice(0, 16)}`}
+                className="card flex gap-5 p-6"
+              >
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-brand-soft text-brand">
+                  <Award className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-[17px] leading-snug">{p.name}</h3>
+                  <p className="mt-1 font-display text-[13px] font-semibold text-brand">
+                    {p.role}
+                  </p>
+                  <p className="mt-2.5 text-[14.5px] leading-relaxed text-slatey">
+                    {p.body}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <Newsletter />
+      <BecomeMemberCTA blurb="Recognition through the AIMO Awards is one of the benefits open to performing and active members." />
     </>
   );
 }

@@ -5,11 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/about",
-    "/about/founder",
     "/about/tamil-nadu-state-board",
     "/about/office-bearers",
     "/membership",
-    "/membership/categories",
     "/membership/apply",
     "/events",
     "/events/past",

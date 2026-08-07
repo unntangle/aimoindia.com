@@ -81,20 +81,11 @@ export const nav: NavItem[] = [
     href: "/about",
     children: [
       { label: "About AIMO", href: "/about" },
-      { label: "Our Founder", href: "/about/founder" },
-      { label: "About Tamil Nadu State Board", href: "/about/tamil-nadu-state-board" },
-      { label: "Office Bearers & Committee Members", href: "/about/office-bearers" },
+      { label: "State Boards", href: "/state-boards" },
+      { label: "Committee Members", href: "/about/office-bearers" },
     ],
   },
-  {
-    label: "Membership",
-    href: "/membership",
-    children: [
-      { label: "Why Join", href: "/membership" },
-      { label: "Membership Categories", href: "/membership/categories" },
-      { label: "Online Membership Form", href: "/membership/apply" },
-    ],
-  },
+  { label: "Membership", href: "/membership" },
   {
     label: "Events & Awards",
     href: "/events",
@@ -107,12 +98,8 @@ export const nav: NavItem[] = [
   },
   {
     label: "Resources",
-    href: "/resources/book-hall",
-    children: [
-      { label: "Book Hall & Board Room", href: "/resources/book-hall" },
-      { label: "Our Magazine", href: "/resources/magazine" },
-      { label: "Internship Programme", href: "/resources/internship" },
-    ],
+    href: "/press",
+    children: [{ label: "Press Release", href: "/press" }],
   },
   { label: "Contact", href: "/contact" },
 ];
@@ -182,6 +169,350 @@ export const stats = [
   { value: "117 Mn", label: "People employed — 40% of the workforce" },
   { value: "37%", label: "Share of national GDP" },
   { value: "43%", label: "Of India's total exports" },
+];
+
+/* ------------------------------- Founder -------------------------------- */
+
+export const founder = {
+  name: "Sir Mokshagundam Visvesvaraya",
+  known: "Sir MV",
+  born: "15 September 1861",
+  died: "12 April 1962",
+  bio: [
+    "Sir Mokshagundam Visvesvaraya, popularly known as Sir MV (15 September 1861 – 12 April 1962), was an Indian engineer, scholar, statesman, and the 19th Diwan of Mysore, who served from 1912 to 1918. He received India's highest honour, the Bharat Ratna, in 1955.",
+    "He was knighted as a Knight Commander of the British Indian Empire (KCIE) by King George V for his contributions to the public good. 15 September is celebrated as Engineer's Day in India in his memory. He is held in high regard as a pre-eminent Engineer of India. He was chief engineer responsible for the construction of the Krishna Raja Sagara dam, and chief engineer of the flood protection system for the city of Hyderabad.",
+  ],
+  honours: [
+    "Appointed a Companion of the Order of the Indian Empire (CIE) in 1911.",
+    "Awarded honorary membership of the London Institution of Civil Engineers.",
+    "Awarded a fellowship of the Indian Institute of Science.",
+    "Awarded several honorary doctoral degrees including D.Sc., LL.D. and D.Litt. from eight universities in India.",
+    "President of the 1923 session of the Indian Science Congress.",
+    "Conferred the Bharat Ratna, India's highest civilian honour, in 1955.",
+  ],
+  namedInHisHonour: [
+    {
+      name: "Visvesvaraya Technological University, Belagavi",
+      note: "Most engineering colleges in Karnataka are affiliated to it.",
+    },
+    {
+      name: "University Visvesvaraya College of Engineering, Bangalore",
+      note: "Among the oldest engineering institutions in the state.",
+    },
+    {
+      name: "Sir M. Visvesvaraya Institute of Technology, Bangalore",
+      note: "Named for him in recognition of his work in engineering education.",
+    },
+    {
+      name: "Visvesvaraya National Institute of Technology, Nagpur",
+      note: "An institute of national importance carrying his name.",
+    },
+    {
+      name: "College of Engineering, Pune",
+      note: "His alma mater, which has erected a statue in his honour.",
+    },
+    {
+      name: "Visvesvaraya Industrial and Technological Museum, Bangalore",
+      note: "Named in his honour and dedicated to science and industry.",
+    },
+  ],
+  works: [
+    {
+      year: "1917",
+      title: "Speeches",
+      publisher: "Bangalore: Govt. Press",
+      oclc: "6258388",
+    },
+    {
+      year: "1920",
+      title: "Reconstructing India",
+      publisher: "P. S. King & Son, Ltd",
+      oclc: "2430680",
+    },
+    {
+      year: "1932",
+      title: "Unemployment in India; its causes and cure",
+      publisher: "Bangalore: The Bangalore Press",
+      oclc: "14348788",
+    },
+    {
+      year: "1936",
+      title: "Planned Economy for India",
+      publisher: "Bangalore: Bangalore Press",
+      oclc: "19373044",
+    },
+    {
+      year: "1951",
+      title: "Memories of My Working Life",
+      publisher: "Bangalore",
+      oclc: "6459729",
+    },
+    {
+      year: "1959",
+      title: "A Brief Memoir of My Complete Working Life",
+      publisher: "Government Press, Bangalore",
+      oclc: "",
+    },
+  ],
+};
+
+/* --------------------- About page section navigation --------------------- */
+
+export const aboutSections = [
+  { id: "overview", label: "About AIMO" },
+  { id: "our-founder", label: "Our Founder" },
+  { id: "industry-representation", label: "Industry Representation" },
+  { id: "government-relations", label: "Government Relations" },
+  { id: "past-presidents", label: "Past Presidents" },
+  { id: "national-leadership", label: "National Leadership Team" },
+  { id: "gc-members", label: "National GC Members" },
+  { id: "past-national-team", label: "Immediate Past National Team" },
+];
+
+/* ------------------------ Industry representation ----------------------- */
+
+export const industryRepresentation = {
+  intro:
+    "The Government of India has identified the following key sectors to develop products in India. We at AIMO understand the nuances and magnitude of scale in implementing the scheme. AIMO will actively work with the Central and State Governments to ensure the vision for Make in India is successful.",
+  sectors: [
+    "Automobile",
+    "Automobile Components",
+    "Aviation",
+    "Biotechnology",
+    "Chemicals",
+    "Construction",
+    "Defence Manufacturing",
+    "Electrical Machinery",
+    "Electronic Systems",
+    "Food Processing",
+    "IT and BPM",
+    "Leather",
+    "Media and Entertainment",
+    "Mining",
+    "Oil and Gas",
+    "Pharmaceuticals",
+    "Renewable Energy",
+    "Space",
+    "Textiles and Garments",
+    "Power",
+    "Tourism and Hospitality",
+    "Wellness",
+  ],
+};
+
+/* -------------------------- Government relations ------------------------ */
+
+export const governmentRelations = {
+  intro:
+    "AIMO has been recognised by the Government of India as an apex organisation of Industry and given representation on most of the policy making bodies of the Central and State Governments. AIMO has been instrumental in creating an environment for co-operation between Government and Industry, in promoting and co-ordinating industrial and economic growth, and has worked for servicing trade and industry and the community. In order to effectively represent industry, AIMO actively participates in over 150 National and State level Government and quasi Government bodies.",
+  count: "150+",
+  bodies: [
+    "Central Excise Regional Advisory Committee, Chennai II and III",
+    "State Labour Advisory Committee",
+    "Minimum Wages Advisory Committee",
+    "Good Industrial Relations Advisory Committee",
+    "Regional Workers Education Advisory Committee",
+    "SISI Advisory Committee",
+    "Regional Testing Centre Advisory Committee",
+    "State Consumer Protection Council",
+    "Anna University Planning & Monitoring Board",
+    "EPF Advisory Committee",
+    "ESI Regional Council",
+    "ESI Medical Council",
+    "State Employees Welfare Association",
+    "Labour Welfare Board",
+    "Service Tax Regional Advisory Committee",
+  ],
+};
+
+/* ----------------------------- Past presidents -------------------------- */
+
+export const pastPresidents = [
+  { name: "Dr. M. Visvesvaraya", year: "1941" },
+  { name: "Shri Murarji J. Vaidya", year: "1954" },
+  { name: "Shri S. N. Haji", year: "1956" },
+  { name: "Shri N. D. Sahukar", year: "1958" },
+  { name: "Shri G. V. Puranik", year: "1960" },
+  { name: "Shri Prabhu V. Mehta", year: "1962" },
+  { name: "Shri Hansraj Gupta", year: "1964" },
+  { name: "Shri B. D. Somani", year: "1966" },
+  { name: "Shri Y. A. Fazalbhoy", year: "1968" },
+  { name: "Dr. Pranlal J. Patel", year: "1969" },
+  { name: "Shri S. M. Dahanukar", year: "1970" },
+  { name: "Shri K. N. Modi", year: "1971" },
+  { name: "Dr. B. V. Bhoota", year: "1972" },
+  { name: "Shri Ram Agrawal", year: "1973" },
+  { name: "Dr. S. K. Somaiya", year: "1974" },
+  { name: "Shri Bipinbhai V. Mehta", year: "1975" },
+  { name: "Shri S. P. Mandelia", year: "1976" },
+  { name: "Shri M. R. Shroff", year: "1977" },
+  { name: "Shri K. G. Khosla", year: "1978" },
+  { name: "Shri K. V. Srinivasan", year: "1979" },
+  { name: "Shri N. M. Desai", year: "1980" },
+  { name: "Dr. I. P. Poddar", year: "1981" },
+  { name: "Shri Sumant J. Patel", year: "1982" },
+  { name: "Shri M. K. Mohta", year: "1983" },
+  { name: "Shri Suresh Mehta", year: "1984" },
+  { name: "Shri P. Maruthai Pillai", year: "1985" },
+  { name: "Shri K. K. Khandelwal", year: "1986" },
+  { name: "Shri Yograj Chauhan", year: "1987" },
+  { name: "Shri R. M. Dujodwala", year: "1988" },
+  { name: "Shri Kamal M. Morarka", year: "1989" },
+  { name: "Shri Vijay G. Kalantri", year: "1991" },
+  { name: "Shri V. Mohan Rao", year: "1994" },
+  { name: "Shri K. Dujodwala", year: "1995" },
+  { name: "Shri P. S. Kalani", year: "2000" },
+  { name: "Shri Babulal Todi", year: "2002" },
+  { name: "Shri A. K. Sen", year: "2006" },
+  { name: "Shri N. Tarachand Dugar", year: "2012" },
+  { name: "Shri K. E. Raghunathan", year: "2016" },
+];
+
+/* --------------------------- National GC members ------------------------ */
+
+export const gcMembers = {
+  intro:
+    "The National Governing Council comprises leaders of trade and industry — a mix of youthful energy and experienced leadership. The NGC meets on a regular basis across the country to decide the framework and plan of action for the Leadership Team at AIMO India.",
+  members: [
+    { name: "Sushil Vyas", designation: "President", mobile: "9320707999", email: "vyassushil46@gmail.com" },
+    { name: "Harish Metha", designation: "Senior Vice President", mobile: "9444440428", email: "metha.group@gmail.com" },
+    { name: "Shrikant Dalmia", designation: "Treasurer", mobile: "9820004802", email: "dalmiashrikant@gmail.com" },
+    { name: "Kenny Ramanand", designation: "Secretary", mobile: "8884446243", email: "kenny.Ramanand@gmail.com" },
+    { name: "V. K. Singh", designation: "ZVP North", mobile: "9810156751", email: "vksinghags@gmail.com" },
+    { name: "B. P. Bakshi", designation: "ZVP East", mobile: "7002181916", email: "bp.bakshi@rediffmail.com" },
+    { name: "R. Radhakrishnan", designation: "ZVP South", mobile: "9840944318", email: "rr@triadss.com" },
+    { name: "Ashok Kadakia", designation: "ZVP West", mobile: "9821017277", email: "ashokkadakia@gmail.com" },
+    { name: "Girdhari Lal Pareek", designation: "Joint Secretary", mobile: "9435035865", email: "glp3332006@gmail.com" },
+    { name: "Arvind Tibrewala", designation: "Joint Secretary", mobile: "9821214000", email: "arvindtibrewala@gmail.com" },
+    { name: "K. E. Raghunathan", designation: "Past President", mobile: "9840947485", email: "ragu@solkar.in" },
+    { name: "Tarachand Dugar", designation: "Past President", mobile: "9383009900", email: "dugarnt@dugar.in" },
+    { name: "Praveen Aggarwal", designation: "State Board Chairman (Maharashtra)", mobile: "9320068653", email: "pmumbai17@gmail.com" },
+    { name: "S. A. Sampathraman", designation: "State Board Chairman (Karnataka)", mobile: "9845537851", email: "sr@dpkgroup.in" },
+    { name: "M. P. Agarwal", designation: "State Board Chairman (Assam)", mobile: "9435036598", email: "paliwalamp@gmail.com" },
+    { name: "Ramesh Dugar", designation: "State Board Chairman (Tamil Nadu)", mobile: "9841023535", email: "ramesh@dugar.in" },
+    { name: "Hamvir Singh", designation: "State Board Chairman (Delhi / Haryana)", mobile: "9999600280", email: "krshsingh56@gmail.com" },
+    { name: "Rajiv Ranjan", designation: "DSB Nominee", mobile: "9873105778", email: "rajiv55@icloud.com" },
+    { name: "Shyam Sunder Kapoor", designation: "DSB Nominee", mobile: "8527696060", email: "aakash.polytec@gmail.com" },
+    { name: "Anil Kumar Choudhary", designation: "DSB Nominee", mobile: "9811305900", email: "anilchoudhary62@gmail.com" },
+    { name: "Jitendra Pal Shah", designation: "DSB Nominee", mobile: "9811010999", email: "nutechthermopack33@gmail.com" },
+    { name: "Jas Kiran", designation: "DSB Nominee", mobile: "9910317245", email: "jaskiranaadya@gmail.com" },
+    { name: "Anant Kumar Jha", designation: "DSB Nominee", mobile: "9810080801", email: "csakjha@hotmail.com" },
+    { name: "Shree Niwas Rana", designation: "DSB Nominee", mobile: "9810612318", email: "manojkumark024@gmail.com" },
+    { name: "Rajpal Singh", designation: "DSB Nominee", mobile: "9810375137", email: "sonuranapradhan@gmail.com" },
+    { name: "Rajiv Chugh", designation: "DSB Nominee", mobile: "9999083764", email: "dayaramchairman85@gmail.com" },
+    { name: "Daya Ram Singh", designation: "DSB Nominee", mobile: "9953561360", email: "pradeepsarpanch29@gmail.com" },
+    { name: "Pradeep Singh", designation: "DSB Nominee", mobile: "9910044429", email: "paliwalamp@gmail.com" },
+    { name: "Virender Singh Yadav", designation: "DSB Nominee", mobile: "9311182543", email: "vsyadav0008@gmail.com" },
+    { name: "Naveen Man", designation: "DSB Nominee", mobile: "9971939774", email: "rajiv55@icloud.com" },
+    { name: "Krishnakant Bansal", designation: "DSB Nominee", mobile: "9810108736", email: "maannaveen@yahoo.com" },
+    { name: "Kawaljeet Panoo", designation: "DSB Nominee", mobile: "9818830073", email: "k3016kumar@gmail.com" },
+    { name: "Mayur Agarwal", designation: "Assam Nominee", mobile: "9990256722", email: "contact@mayuragr.com" },
+    { name: "Dr. Prasad Rao Pasam", designation: "Karnataka Nominee", mobile: "9845266900", email: "PRASAD.pasam@gmail.com" },
+    { name: "K. R. Mohan", designation: "Karnataka Nominee", mobile: "9844152676", email: "krmohanblr@gmail.com" },
+    { name: "K. C. Jaganath Reddy", designation: "Karnataka Nominee", mobile: "9844006641", email: "kcjreddy9@gmail.com" },
+    { name: "S. Karthikeyan", designation: "Karnataka Nominee", mobile: "9738510690", email: "karthik@myanmol.com" },
+    { name: "Ram Kumar Seshu", designation: "Karnataka Nominee", mobile: "9845500096", email: "ramseshu@borntowin.co.in" },
+    { name: "Sudhakar Pai", designation: "Karnataka Nominee", mobile: "9341370333", email: "spai@manipal.com" },
+    { name: "S. Babu", designation: "Karnataka Nominee", mobile: "9845334343", email: "sleeves4343@gmail.com" },
+    { name: "K. V. Sekhar Raju", designation: "Karnataka Nominee", mobile: "9845153438", email: "kvsekharraju@yahoo.co.in" },
+    { name: "Bopanna", designation: "Karnataka Nominee", mobile: "9845522923", email: "bopannakk@sunpasolutions.com" },
+    { name: "Dr. Vinod Surana", designation: "Tamil Nadu Nominee", mobile: "9884491000", email: "vs@lawindia.com" },
+    { name: "P. Kannan", designation: "Tamil Nadu Nominee", mobile: "9841819589", email: "kannan@amrutanjan.com" },
+    { name: "Sudhakar Mukundan", designation: "Tamil Nadu Nominee", mobile: "9600019366", email: "mukundan.sudhakar@gmail.com" },
+    { name: "Vijay Kalantri", designation: "Maharashtra Nominee", mobile: "9821012500", email: "vijaykalantri@balaji.co.in" },
+    { name: "Suresh Deora", designation: "Maharashtra Nominee", mobile: "9821885928", email: "suresh@bombayampoules.com" },
+    { name: "Kashi Deora", designation: "Maharashtra Nominee", mobile: "9821097661", email: "ksdeora@indvestgroup.com" },
+    { name: "Shreekant Adhiya", designation: "Maharashtra Nominee", mobile: "9323281946", email: "Shreekant.adhiya@gmail.com" },
+    { name: "Shailesh Dalmia", designation: "Maharashtra Nominee", mobile: "9820087142", email: "dalmiashailesh@yahoo.com" },
+    { name: "Ramkishor Darak", designation: "Maharashtra Nominee", mobile: "9820136361", email: "rkdarak@gmail.com" },
+    { name: "Trimbak Tiwari", designation: "Maharashtra Nominee", mobile: "9819679888", email: "trimbaktiwari@gmail.com" },
+    { name: "Anil P. Agarwal", designation: "Maharashtra Nominee", mobile: "9987742941", email: "anil@himalayaterpene.com" },
+    { name: "Rajesh A. Jain", designation: "Maharashtra Nominee", mobile: "9821086673", email: "rajeshjain@hotmail.com" },
+    { name: "Anil R. Agarwal", designation: "Maharashtra Nominee", mobile: "9820216375", email: "collinsacs@gmail.com" },
+    { name: "Udesh Agrawal", designation: "Maharashtra Nominee", mobile: "9820633694", email: "udagrawal55@gmail.com" },
+  ],
+};
+
+/* --------------------- Immediate past national team --------------------- */
+
+export const immediatePastTeam = [
+  {
+    role: "President",
+    name: "K. E. Raghunathan",
+    org: "Managing Director, Solkar Solar Industry Ltd., Chennai",
+    mobile: "+91 98409 47485",
+    email: "ragu@solkar.in",
+  },
+  {
+    role: "Senior National Vice President",
+    name: "Dr. Harish Mehta",
+    org: "Chairman, Indian Red Cross Society, Tamil Nadu",
+    mobile: "+91 94444 40428",
+    email: "svp@aimoindia.com",
+  },
+  {
+    role: "National Vice President",
+    name: "Ashok Kadakia",
+    org: "Director, Ashok Chemicals Ltd, Mumbai",
+    mobile: "+91 98210 17277",
+    email: "ashokkadakia@gmail.com",
+  },
+  {
+    role: "National General Secretary",
+    name: "Kenny Ramanand",
+    org: "Director, Springboard Public Relations, Bangalore",
+    mobile: "+91 88844 46243",
+    email: "gs@aimoindia.com",
+  },
+  {
+    role: "National Treasurer",
+    name: "R. R. Radhakrishnan",
+    org: "",
+    mobile: "+91 98409 44318",
+    email: "treasurer@aimoindia.com",
+  },
+  {
+    role: "Zonal Vice President — East",
+    name: "B. P. Bakshi",
+    org: "Director, Barak Valley Cement Ltd, Assam",
+    mobile: "+91 94353 35346",
+    email: "bp.bakshi@rediffmail.com",
+  },
+  {
+    role: "Zonal Vice President — West",
+    name: "Shrikant Dalmia",
+    org: "",
+    mobile: "+91 98200 04802",
+    email: "dalmiashrikant@gmail.com",
+  },
+  {
+    role: "Zonal Vice President — South",
+    name: "K. C. Jagannath Reddy",
+    org: "",
+    mobile: "+91 98440 06641",
+    email: "kcjreddy9@gmail.com",
+  },
+  {
+    role: "Zonal Vice President — North",
+    name: "M. L. Sharma",
+    org: "",
+    mobile: "+91 98688 28358",
+    email: "mlsharma46@yahoo.co.in",
+  },
+  {
+    role: "National Secretary",
+    name: "Arvind Tibrewala",
+    org: "",
+    mobile: "+91 98212 14000",
+    email: "arvindtibrewala@gmail.com",
+  },
+  {
+    role: "National Secretary",
+    name: "Sushil Vyas",
+    org: "",
+    mobile: "+91 98207 07999",
+    email: "vyassushil46@gmail.com",
+  },
 ];
 
 /* ---------------------------- Featured event ---------------------------- */
@@ -308,66 +639,265 @@ export const membershipTiers = [
   },
 ];
 
+export const membershipLead = "Become a Member now and reap the benefits of AIMO.";
+
 export const memberBenefits = [
   {
     icon: "cpu",
     title: "Exposure to New Tech Trends",
-    body: "The MSME sector cannot afford to meet automation, AI and digital compliance for the first time when a customer demands it. AIMO brings the trends to you early.",
+    body: "We believe that the MSME sector needs to be exposed to new technologies and digital trends which will impact their business.",
+    detail:
+      "The sector cannot afford to meet automation, AI and digital compliance for the first time when a customer demands it. AIMO brings the trends to you early.",
   },
   {
     icon: "landmark",
     title: "A Voice in Public Policy",
-    body: "AIMO makes mature, evidence-led representations to ministries and regulators — and names the members whose experience shaped them.",
+    body: "With greater power comes greater responsibility. AIMO will make mature and serious representations and try to impact public policy in a manner that has a positive impact for the industry and our country.",
+    detail:
+      "Submissions go to ministries and regulators inside the consultation window, and we name the members whose experience shaped them.",
   },
   {
     icon: "book",
     title: "Knowledge and Learning",
-    body: "Continuous improvement of professional skill is what separates a surviving unit from a scaling one. Our calendar is built around that.",
+    body: "We believe that continuous improvement of professional skills ensures greater productivity and greater profits for the entrepreneur. AIMO will provide you numerous platforms for valuable exchange of ideas.",
+    detail:
+      "Workshops, clinics and sector briefings run right through the year, built around what members ask for rather than what is easy to programme.",
   },
   {
     icon: "users",
     title: "Building Business Networks",
-    body: "Thousands of promoters across every state. Some become mentors, some become customers, some become the partner you needed for a tender.",
+    body: "Through interactions with other AIMO members you will be able to build a strong network that fuels professional growth as well as explore new business possibilities.",
+    detail:
+      "Thousands of promoters across every state. Some become mentors, some become customers, some become the partner you needed for a tender.",
   },
   {
     icon: "chart",
-    title: "Access to Research and Data",
-    body: "We partner academic and management institutes to produce sector studies that members can actually use in a board meeting.",
+    title: "Access to New Research and Data",
+    body: "AIMO is committed to getting fresh data that is relevant to the members. We partner educational and management institutes to develop studies for specific sectors.",
+    detail:
+      "Sector studies members can actually use in a board meeting, rather than headline numbers with nothing behind them.",
   },
   {
     icon: "award",
     title: "Rewards and Recognition",
-    body: "Active, performing members get industry recognition and media exposure through the AIMO Awards and our press platform.",
+    body: "We at AIMO reward our performing and active members with industry recognition as well as media exposure.",
+    detail:
+      "Through the AIMO Awards and our press platform, active members get visibility beyond their own customer list.",
   },
 ];
 
 export const enrolSteps = [
-  { step: "01", title: "Download the form", body: "Fill in your personal and enterprise details on the AIMO membership application." },
-  { step: "02", title: "Choose your chapter", body: "Select the State Board or regional chapter closest to your unit." },
-  { step: "03", title: "Pick a category", body: "Associate, Corporate or Patron — based on the scale of your enterprise." },
-  { step: "04", title: "Pay and confirm", body: "Settle the fee by RTGS or the online gateway and receive an email acknowledgement." },
-  { step: "05", title: "Approval", body: "Your State Board and the National Governing Council approve the application." },
-  { step: "06", title: "Welcome aboard", body: "You receive your membership number and docket, and your listing goes live." },
+  {
+    step: "01",
+    title: "Download the membership form",
+    body: "Fill in the online membership form and the printed AIMO application downloads automatically as soon as you submit it.",
+  },
+  {
+    step: "02",
+    title: "Fill in personal details",
+    body: "Your own details and those of the enterprise, exactly as registered.",
+  },
+  {
+    step: "03",
+    title: "Choose chapter or State Board",
+    body: "Select the State Board or regional chapter closest to your unit.",
+  },
+  {
+    step: "04",
+    title: "Choose membership category",
+    body: "Associate, Corporate or Patron — based on the scale of your enterprise.",
+  },
+  {
+    step: "05",
+    title: "Pay using RTGS or online payment gateway",
+    body: "Settle the subscription by RTGS or through the online gateway.",
+  },
+  {
+    step: "06",
+    title: "Approval and docket",
+    body: "Your State Board and the National Governing Council approve the application, and your membership number and docket follow.",
+  },
 ];
+
+export const enrolConfirmation =
+  "You will receive an online confirmation of receipt by email. Your membership will need to be approved by both the State Board and the National Governing Council, after which you will receive your membership number and membership docket.";
+
+/** Printed application form served from /public. */
+export const membershipFormPdf = "/AIMO-membership-form.pdf";
 
 /* ------------------------------ State boards ---------------------------- */
 
-export const stateBoards = [
-  { state: "Maharashtra", city: "Mumbai", note: "National headquarters & Western region" },
-  { state: "Tamil Nadu", city: "Chennai", note: "Engineering, auto components, textiles" },
-  { state: "Karnataka", city: "Bengaluru", note: "Machine tools, electronics, aerospace" },
-  { state: "Delhi NCR", city: "New Delhi", note: "Policy liaison & northern region" },
-  { state: "Gujarat", city: "Ahmedabad", note: "Chemicals, pharma, ceramics" },
-  { state: "Uttar Pradesh", city: "Lucknow", note: "Leather, food processing, handicraft" },
-  { state: "West Bengal", city: "Kolkata", note: "Foundry, jute and eastern region" },
-  { state: "Telangana", city: "Hyderabad", note: "Pharma, life sciences, precision" },
-  { state: "Kerala", city: "Kochi", note: "Marine products, rubber, spices" },
-  { state: "Punjab", city: "Ludhiana", note: "Bicycle parts, hosiery, hand tools" },
-  { state: "Rajasthan", city: "Jaipur", note: "Stone, gems, textiles" },
-  { state: "Madhya Pradesh", city: "Indore", note: "Auto components, agri processing" },
+export const stateBoardsIntro = [
+  "AIMO has created boards at State level to be closer to the industry in that region and to facilitate industry based on the regional or State environment.",
+  "Over 40 Councils on different subject matters, comprising experienced senior executives pooled from member companies, study and analyse various legislative and other matters of concern to industry, and provide expert guidance and advice to the National Working Committee of AIMO for taking up the matter with the different stake holders.",
+  "Periodic workshops and training programmes are organised to help members keep abreast of developments in industry. Plans are also afoot for starting skilling and finishing school programmes as per industry needs in academic institutions, to help the industry get skilled, employable manpower.",
+];
+
+export const stateBoards: {
+  state: string;
+  /** Optional dedicated page for the board; falls back to the contact form. */
+  href?: string;
+  officers: { role: string; name: string; phone: string }[];
+}[] = [
+  {
+    state: "Assam",
+    officers: [
+      { role: "Chairman", name: "Shri Mahabir Agarwal", phone: "+91 94350 36598" },
+      { role: "General Secretary", name: "Shri Girdhari Lal Pareek", phone: "+91 94350 35865" },
+    ],
+  },
+  {
+    state: "Delhi",
+    officers: [
+      { role: "Chairman", name: "Shri Pawanpreet Singh", phone: "+91 70655 50644" },
+      { role: "General Secretary", name: "Shri Gogi Kapoor", phone: "+91 98103 36464" },
+    ],
+  },
+  {
+    state: "Gujarat",
+    officers: [
+      { role: "Chairman", name: "Shri Manish Chhaganalal Thakkar", phone: "+91 98700 50011" },
+    ],
+  },
+  {
+    state: "Karnataka",
+    officers: [
+      { role: "Chairman", name: "Shri Sampathraman", phone: "+91 98455 36598" },
+      { role: "General Secretary", name: "Shri Prasad Pasam", phone: "+91 98452 66900" },
+    ],
+  },
+  {
+    state: "Maharashtra",
+    officers: [
+      { role: "Chairman", name: "Shri Nirav Shah", phone: "+91 97683 99999" },
+      { role: "General Secretary", name: "Shri Roshan Thakkar", phone: "+91 98333 30553" },
+    ],
+  },
+  {
+    state: "Punjab",
+    officers: [
+      { role: "Chairman", name: "Shri Sunir Sharma", phone: "+91 98140 09009" },
+    ],
+  },
+  {
+    state: "Tamil Nadu",
+    href: "/about/tamil-nadu-state-board",
+    officers: [
+      { role: "Chairman", name: "Shri Ramesh Dugar", phone: "+91 98410 23535" },
+      { role: "General Secretary", name: "Shri Sudhakar Mukund", phone: "+91 96000 19366" },
+    ],
+  },
+  {
+    state: "Telangana",
+    officers: [
+      { role: "Chairman", name: "Shri Mandava Venkata Raghunath", phone: "+91 70532 77777" },
+      { role: "General Secretary", name: "Shri Rajesh", phone: "+91 92461 92244" },
+    ],
+  },
+];
+
+/* ------------------------------ Past events ----------------------------- */
+
+/** Event posters/flyers shown on the Past Events page. Add new files to
+    /public and list them here — the grid and lightbox pick them up. */
+export const pastEventPosters = [
+  {
+    src: "/past-event.png",
+    title: "About Engineer's Day",
+    meta: "15 September",
+  },
 ];
 
 /* -------------------------------- Awards -------------------------------- */
+
+export const visvesvarayaAward = {
+  title: "Sir Visvesvaraya Industrial Award",
+  intro: [
+    "It is significant to mention that India's first ever World Trade Centre, Mumbai — named after Dr. M. Visvesvaraya as the M. Visvesvaraya Industrial Research & Development Centre (MVIRDC in short) — is the outcome of the initiative taken by AIMO.",
+    "Every year we identify an industry for its excellent performance and present it with the Sir Visvesvaraya Industrial Award. In the past we have given this award to organisations like:",
+  ],
+  recipients: [
+    "TVS Group",
+    "Chemicals & Plastics India Ltd.",
+    "Ashok Leyland Ltd.",
+    "MRF Ltd.",
+    "S I Viscose Ltd",
+    "Madras Refineries Ltd — Public Sector",
+    "Sundaram Fasteners Ltd.",
+    "Bharat Heavy Electricals Ltd — Public Sector",
+    "Lakshmi Machine Works Ltd.",
+    "Neyvelli Lignite Corpn. Ltd — Public Sector",
+    "Tamil Nadu Petroproducts Ltd.",
+    "Hindustan Teleprinters Ltd — Public Sector",
+    "Chemfab Alkalies Ltd.",
+    "Madras Cements Ltd.",
+    "India Pistons Ltd.",
+    "Orchid Chemicals and Pharmaceuticals Ltd.",
+    "Shasun Chemicals and Drugs Ltd.",
+    "MAARS India Ltd.",
+    "Sri Krishna Sweets Pvt. Ltd.",
+    "E.I.D. Parry (India) Ltd.",
+    "Bannari Amman Sugars Ltd.",
+    "Indian Bank",
+    "M.M. Exports",
+    "City Union Bank (Banking)",
+    "Hyundai Motors India Ltd (Automobile)",
+    "Marg Group (Infrastructure)",
+    "Grundfos India Ltd (Manufacturing)",
+    "DP World Chennai",
+    "LifeCell International Pvt. Ltd.",
+    "Indian Overseas Bank",
+  ],
+  presentersLead:
+    "This award is given at a function in the presence of renowned personalities. In the past we have had the pleasure of having:",
+  presenters: [
+    {
+      name: "His Excellency Shri P. S. Ramamohan Rao",
+      role: "Governor of Tamil Nadu",
+      body: "to deliver this award to Sri Krishna Sweets in 2002.",
+    },
+    {
+      name: "His Excellency Dr. P. C. Alexander",
+      role: "Governor of Tamil Nadu",
+      body: "to deliver this award to MRF Ltd. in 1997.",
+    },
+    {
+      name: "His Excellency Dr. Bhishma Narain Singh",
+      role: "Governor of Tamil Nadu",
+      body: "to deliver this award to Sundaram Fasteners in 1989.",
+    },
+    {
+      name: "His Excellency Dr. Chenna Reddy",
+      role: "Governor of Tamil Nadu",
+      body: "to deliver this award to Tamilnadu Petro Products and Hindustan Teleprinters Ltd. during 1991.",
+    },
+    {
+      name: "Shri P. A. Sangma",
+      role: "Honourable Minister for Labour, Government of India",
+      body: "to deliver this award to Chemplast in 1992.",
+    },
+    {
+      name: "Shri Kumara Mangalam",
+      role: "Honourable Minister for Power, Government of India",
+      body: "to deliver this award to Shasun Chemicals & Pharmaceuticals Ltd.",
+    },
+    {
+      name: "Shri P. Chidambaram",
+      role: "Honourable Finance Minister, Government of India",
+      body: "delivered the award to M/s. E.I.D. Parry (India) Ltd., Bannari Amman Sugars Ltd., M.M. Exports and Indian Bank on 8th July 2005 at GRT Grand Hotel, Chennai 17.",
+    },
+    {
+      name: "His Excellency Shri Surjit Singh Barnala",
+      role: "Governor of Tamil Nadu",
+      body: "delivered the award to M/s. City Union Bank Ltd., Marg Group, Grundfos Pumps India Pvt. Ltd. and Hyundai Motors India P Ltd. on 16th August 2010 at Raj Bhavan, Chennai.",
+    },
+    {
+      name: "Thiru. D. Jayakumar",
+      role: "Honourable Speaker, Tamil Nadu Legislative Assembly",
+      body: "delivered the Sir Visvesvaraya Industrial Awards to M/s. DP World Chennai, Indian Overseas Bank and LifeCell International Pvt. Ltd. on 6th August 2012 at Hotel Savera, Mylapore, Chennai.",
+    },
+  ],
+};
 
 export const awardCategories = [
   { title: "Manufacturer of the Year", body: "The unit that best combined growth, quality and employment creation over the assessment year." },
@@ -376,6 +906,95 @@ export const awardCategories = [
   { title: "Digital Transformation", body: "Meaningful adoption of automation, ERP or data-led decision-making on the shop floor." },
   { title: "Woman Entrepreneur", body: "Recognising women promoters building and scaling manufacturing enterprises." },
   { title: "Young Entrepreneur", body: "Under-40 promoters who have taken a family unit or a start-up to a new level." },
+];
+
+/* --------------------------- Press / In the media ------------------------ */
+
+/** Coverage of AIMO in the media. Screenshots live in /public. */
+export const mediaCoverage: {
+  outlet: string;
+  date?: string;
+  headline?: string;
+  url: string;
+  image: string;
+}[] = [
+  {
+    outlet: "Reuters",
+    date: "7 April 2020",
+    headline:
+      "India's small businesses struggle to pay wages amid coronavirus lockdown",
+    url: "https://www.reuters.com/article/us-health-coronavirus-india-business/indias-small-businesses-struggle-to-pay-wages-amid-coronavirus-lockdown-idUSKBN21P1UY",
+    image: "/pr-1.png",
+  },
+  {
+    outlet: "Nasdaq",
+    date: "7 April 2020",
+    headline:
+      "India's small businesses struggle to pay wages amid coronavirus lockdown",
+    url: "https://www.nasdaq.com/articles/indias-small-businesses-struggle-to-pay-wages-amid-coronavirus-lockdown-2020-04-07",
+    image: "/pr-2.png",
+  },
+  {
+    outlet: "The Times of India",
+    date: "9 April 2020",
+    headline:
+      "To help small firms, India may unveil second coronavirus stimulus worth Rs 1 lakh crore",
+    url: "https://timesofindia.indiatimes.com/business/india-business/to-help-small-firms-india-may-unveil-second-coronavirus-stimulus-worth-rs-1-lakh-crore/articleshow/75057356.cms",
+    image: "/pr-3.png",
+  },
+  {
+    outlet: "Outlook India",
+    headline:
+      "Lockdown: Migrant workers from North East feeling insecure to return to workplace, says AIMO",
+    url: "https://www.outlookindia.com/newsscroll/lockdown-migrant-workers-from-north-east-feeling-insecure-to-return-to-workplace-says-aimo/1796880",
+    image: "/pr-4.png",
+  },
+  {
+    outlet: "The Hindu BusinessLine",
+    headline:
+      "All India Manufacturers' Organisation urges govt to provide support package to MSMEs",
+    url: "https://www.thehindubusinessline.com/economy/all-india-manufacturers-organisation-urges-govt-to-provide-support-package-to-msmes/article31163828.ece",
+    image: "/pr-5.png",
+  },
+  {
+    outlet: "Eastern Eye",
+    date: "8 April 2020",
+    headline:
+      "India's small businesses struggle to pay wages amid coronavirus lockdown",
+    url: "https://www.easterneye.biz/indias-small-businesses-struggle-to-pay-wages-amid-coronavirus-lockdown/",
+    image: "/pr-6.png",
+  },
+  {
+    outlet: "Deccan Herald",
+    headline: "MSMEs seek deferment of electricity, water bills for 3 months",
+    url: "https://www.deccanherald.com/business/business-news/msmes-seek-deferment-of-electricity-water-bills-for-3-months-818244.html",
+    image: "/pr-7.png",
+  },
+  {
+    outlet: "The Shillong Times",
+    date: "10 April 2020",
+    headline: "Migrant workers from NE feeling insecure to return to workplace",
+    url: "http://theshillongtimes.com/2020/04/10/migrant-workers-from-ne-feeling-insecure-to-return-to-workplace/",
+    image: "/pr-8.png",
+  },
+  {
+    outlet: "Nagaland Post",
+    headline: "Migrant workers from NE feeling insecure to return to workplace",
+    url: "http://www.nagalandpost.com/-migrant-workers-from-ne-feeling-insecure-to-return-to-workplace/214337.html",
+    image: "/pr-9.png",
+  },
+  {
+    outlet: "Business Today",
+    headline:
+      "Govt may announce 2nd coronavirus stimulus worth Rs 1 lakh crore for small, medium businesses",
+    url: "https://www.businesstoday.in/current/economy-politics/govt-may-announce-2nd-coronavirus-stimulus-worth-rs-1-lakh-crore-for-small-medium-businesses/story/400536.html",
+    image: "/pr-10.png",
+  },
+  {
+    outlet: "YourStory",
+    url: "https://yourstory.com/smbstory/msmes-coronavirus-lockdown-india-covid-19",
+    image: "/pr-11.png",
+  },
 ];
 
 /* --------------------------- Press / news items -------------------------- */
@@ -428,19 +1047,23 @@ export const sectors = [
 
 /* ------------------------------- Gallery -------------------------------- */
 
-export const gallery = [
-  { src: img.boardroom, caption: "National Governing Council session, Mumbai" },
-  { src: img.speaker, caption: "Keynote at the Manufacturing Summit" },
-  { src: img.factoryFloor, caption: "Member unit visit — precision engineering" },
-  { src: img.networking, caption: "Young Entrepreneurs Forum, Bengaluru" },
-  { src: img.lectureHall, caption: "Export readiness workshop" },
-  { src: img.womanEngineer, caption: "Women in Manufacturing initiative" },
-  { src: img.awards, caption: "AIMO Excellence Awards" },
-  { src: img.handshake, caption: "MoU signing with a partner institute" },
-  { src: img.precision, caption: "Shop-floor automation clinic" },
-  { src: img.officeTeam, caption: "State Board coordination meeting" },
-  { src: img.warehouse, caption: "Logistics and warehousing round-table" },
-  { src: img.india, caption: "Regional chapter outreach" },
+/** Photo gallery, grouped by event. Drop new files into /public and add them
+    to the relevant album — the gallery page and lightbox pick them up. */
+export const galleryAlbums = [
+  {
+    title: "Engineers Day Celebration 2023",
+    meta: "15 September 2023 · Delhi Regional Board",
+    blurb:
+      "The National Conference on Employment Generation in the Present Economic Environment, held at Apparel House, Sector 44, Gurugram to mark Engineer's Day.",
+    photos: [
+      { src: "/event-1.png", caption: "Lighting of the lamp to open the conference" },
+      { src: "/event-1.1.png", caption: "Delegates on stage at the National Conference" },
+      { src: "/event-1.2.png", caption: "Office bearers and guests at the dais" },
+      { src: "/event-1.3.png", caption: "Felicitation of a guest of honour" },
+      { src: "/event-1.4.png", caption: "Presenting a bouquet to a delegate" },
+      { src: "/event-1.5.png", caption: "The full gathering on stage" },
+    ],
+  },
 ];
 
 /* ------------------------------ Testimonials ---------------------------- */

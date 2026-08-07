@@ -20,14 +20,19 @@ const socialLinks = [
 
 const quickLinks = [
   { label: "About AIMO", href: "/about" },
-  { label: "Our Founder", href: "/about/founder" },
+  { label: "Our Founder", href: "/about#our-founder" },
+  { label: "Industry Representation", href: "/about#industry-representation" },
+  { label: "Government Relations", href: "/about#government-relations" },
+  { label: "Past Presidents", href: "/about#past-presidents" },
+  { label: "National Leadership Team", href: "/about#national-leadership" },
   { label: "Tamil Nadu State Board", href: "/about/tamil-nadu-state-board" },
   { label: "Office Bearers", href: "/about/office-bearers" },
-  { label: "Why Join", href: "/membership" },
-  { label: "Membership Categories", href: "/membership/categories" },
 ];
 
 const otherLinks = [
+  { label: "Membership", href: "/membership" },
+  { label: "Member Benefits", href: "/membership#benefits" },
+  { label: "Become a Member", href: "/membership/apply" },
   { label: "Upcoming Event", href: "/events" },
   { label: "Past Events", href: "/events/past" },
   { label: "Photo Gallery", href: "/gallery" },
@@ -40,7 +45,7 @@ const otherLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy text-white/65">
+    <footer className="border-t border-white/10 bg-navy text-white/65">
       <div className="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
         {/* Brand */}
         <div>
@@ -137,9 +142,6 @@ export default function Footer() {
             </Link>
             <Link href="/contact" className="hover:text-white">
               Terms
-            </Link>
-            <Link href="/membership/apply" className="text-brand hover:text-white">
-              Become a Member
             </Link>
           </p>
         </div>

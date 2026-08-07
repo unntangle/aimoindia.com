@@ -6,9 +6,9 @@ import MembershipForm from "@/components/ui/MembershipForm";
 import { contact, img } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Online Membership Form",
+  title: "Become a Member",
   description:
-    "Apply online for membership of the All India Manufacturers' Organisation. Enterprise details, category selection and State Board chapter in one form.",
+    "Become a member of the All India Manufacturers' Organisation. Fill in the membership form and the printed application downloads as soon as you submit.",
 };
 
 export default function ApplyPage() {
@@ -16,10 +16,10 @@ export default function ApplyPage() {
     <>
       <PageHero
         eyebrow="Membership"
-        title="Online Membership Form"
-        intro="Fill this in once and the Secretariat routes it to your State Board. Nothing is charged at this stage — payment instructions follow by email."
+        title="Become a Member"
+        intro="Fill this in once and the Secretariat routes it to your State Board. The printed application downloads automatically when you submit — nothing is charged at this stage."
         image={img.notes}
-        crumb="Online Membership Form"
+        crumb="Become a Member"
       />
 
       <section className="bg-mist py-20 lg:py-24">
@@ -34,6 +34,7 @@ export default function ApplyPage() {
               <h3 className="mt-4 text-[18px]">What happens next</h3>
               <ol className="mt-4 space-y-3 text-[14px] text-slatey">
                 {[
+                  "The printed membership form downloads as soon as you submit.",
                   "We acknowledge your application by email within two working days.",
                   "Your State Board reviews the details and may call to clarify.",
                   "Payment instructions are sent — RTGS or the online gateway.",
@@ -76,22 +77,21 @@ export default function ApplyPage() {
                 <Mail className="h-4 w-4 text-brand" />
                 {contact.emails[0]}
               </a>
-              <Link href="/membership/categories" className="btn btn-ghost mt-5 w-full">
-                Compare categories
+              <Link href="/membership#benefits" className="btn btn-ghost mt-5 w-full">
+                Member benefits
               </Link>
             </div>
 
-            <a
-              href="https://www.aimoindia.com/AIMOMA.pdf"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/membership#how-to-enrol"
               className="card flex items-center gap-4 p-6 text-[14.5px] font-medium text-navy"
             >
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-soft text-brand">
                 <Download className="h-4.5 w-4.5" />
               </span>
-              Prefer paper? Download the printed application form.
-            </a>
+              The printed form downloads automatically once you submit. See how enrolment
+              works.
+            </Link>
           </aside>
         </div>
       </section>

@@ -75,7 +75,7 @@ export default function Header() {
               width={EMBLEM.w}
               height={EMBLEM.h}
               priority
-              className="h-12 w-auto"
+              className="h-14 w-auto sm:h-16"
             />
           </Link>
 
@@ -157,6 +157,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={item.href}
+                        onClick={() => setOpen(false)}
                         className={`flex-1 py-3.5 font-display text-[15px] font-medium ${
                           isActive(item.href) ? "text-brand" : "text-navy"
                         }`}
@@ -186,6 +187,7 @@ export default function Header() {
                           <Link
                             key={child.label}
                             href={child.href}
+                            onClick={() => setOpen(false)}
                             className="block border-l border-hairline py-2 pl-4 text-[14px] text-slatey hover:text-brand"
                           >
                             {child.label}
