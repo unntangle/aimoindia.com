@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { MapPin } from "lucide-react";
+import { Download, MapPin } from "lucide-react";
 import Img from "@/components/ui/Img";
 import { featuredEvent } from "@/lib/site";
 
@@ -115,8 +115,16 @@ export default function UpcomingEvent() {
             <Link href="/events" className="btn btn-primary">
               Join Now
             </Link>
+            <a
+              href={featuredEvent.brochure}
+              download
+              className="btn btn-outline"
+            >
+              <Download className="h-4 w-4" />
+              Download Brochure
+            </a>
             <Link
-              href="/contact"
+              href="/events#sponsor"
               className="link-underline font-display text-[14.5px] font-semibold text-navy"
             >
               Sponsor the Summit

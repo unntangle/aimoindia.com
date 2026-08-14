@@ -58,8 +58,8 @@ export default function Intro() {
         <div className="relative">
           <div className="relative aspect-[5/6] overflow-hidden rounded-2xl shadow-[0_30px_70px_-32px_rgba(15,27,61,0.6)]">
             <Img
-              src={img.warehouse}
-              alt="Worker moving pallets in an MSME warehouse"
+              src={img.aimoEvent1}
+              alt="AIMO members and office bearers at a national conference"
               sizes="(max-width: 1024px) 100vw, 45vw"
               seed="intro"
               className="object-cover"

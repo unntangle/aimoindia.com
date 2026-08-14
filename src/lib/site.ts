@@ -35,6 +35,17 @@ export const img = {
   conferenceHall: U("1497366754035-f200968a6e72"),
   auditorium: U("1519167758481-83f550bb49b3"),
   summitCrowd: U("1511578314322-379afb476865"),
+
+  /* ---- Local photographs of the actual AIMO premises ---- */
+  aimoHall: "/assets/slider1.jpeg",
+  aimoBoardRoom: "/assets/slider2.jpeg",
+  aimoTrainingRoom: "/assets/slider3.jpeg",
+
+  /* ---- Local photographs from AIMO events ---- */
+  aimoEvent1: "/assets/gal1.jpeg",
+  aimoEvent2: "/assets/gal2.jpeg",
+  aimoEvent3: "/assets/gal3.jpeg",
+  aimoEvent4: "/assets/gal4.jpeg",
 };
 
 export const site = {
@@ -99,7 +110,10 @@ export const nav: NavItem[] = [
   {
     label: "Resources",
     href: "/press",
-    children: [{ label: "Press Release", href: "/press" }],
+    children: [
+      { label: "Press Release", href: "/press" },
+      { label: "Book Hall & Board Room", href: "/resources/book-hall" },
+    ],
   },
   { label: "Contact", href: "/contact" },
 ];
@@ -108,13 +122,13 @@ export const nav: NavItem[] = [
 
 export const heroSlides = [
   {
-    eyebrow: "Upcoming · 19–20 November 2026",
-    title: "AIMO National Manufacturing Summit",
+    eyebrow: "Upcoming · 25–26 September 2026",
+    title: "AIMO KAVERI-TECHKNOW 2026",
     body: "Two days on the questions that will decide the next decade of Indian manufacturing: export competitiveness, credit beyond collateral, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters at the Nehru Centre, Mumbai.",
     image: img.summitCrowd,
     cta: { label: "View Event Details", href: "/events" },
     cta2: { label: "Past Events", href: "/events/past" },
-    alt: "Delegates at the AIMO National Manufacturing Summit",
+    alt: "Delegates at AIMO KAVERI-TECHKNOW 2026",
   },
   {
     eyebrow: "Why Become an AIMO Member?",
@@ -128,8 +142,8 @@ export const heroSlides = [
   {
     eyebrow: "Book Hall & Board Room",
     title: "Your Next Meeting, at the AIMO Premises",
-    body: "A 120-seat conference hall, an 18-seat board room and a 40-seat training room in the heart of Fort, Mumbai: fully equipped, air-conditioned, and available at substantially reduced rates for members.",
-    image: img.conferenceHall,
+    body: "Suitable to host seminars, workshops, meetings, mini-conferences and training programmes.",
+    image: img.aimoHall,
     cta: { label: "Check Availability", href: "/resources/book-hall" },
     cta2: { label: "See the Spaces", href: "/resources/book-hall#spaces" },
     alt: "The AIMO conference hall set up for a session",
@@ -518,14 +532,16 @@ export const immediatePastTeam = [
 /* ---------------------------- Featured event ---------------------------- */
 
 export const featuredEvent = {
-  eyebrow: "Upcoming Convention",
-  title: "AIMO National Manufacturing Summit",
-  date: "2026-11-19T09:30:00+05:30",
-  dateLabel: "19–20 November 2026",
-  dayBadge: { day: "19", month: "Nov" },
+  eyebrow: "Upcoming Event",
+  title: "AIMO KAVERI-TECHKNOW 2026",
+  date: "2026-09-25T09:30:00+05:30",
+  dateLabel: "25–26 September 2026",
+  dayBadge: { day: "25", month: "Sep" },
   venue: "Nehru Centre, Worli, Mumbai",
+  /** Spaces are percent-encoded so the href resolves correctly. */
+  brochure: "/assets/KAVERI-TECHKNOW%202026-BROCHURE-DESIGN-SAMPLE-I.pdf",
   body: "Two days on the themes that will decide the next decade of Indian manufacturing: export competitiveness after the new trade agreements, credit access beyond collateral, energy costs, and the skills pipeline. Ministers, bankers, buyers and 900 promoters in one room.",
-  image: img.speaker,
+  image: img.aimoEvent4,
   highlights: [
     "12 sector round-tables with policy-makers",
     "Curated buyer–supplier matchmaking desk",
@@ -533,8 +549,57 @@ export const featuredEvent = {
   ],
 };
 
-/* ---------------------------- Leadership team --------------------------- */
+/* --------------------- Sponsorship categories --------------------------- */
 
+export const sponsorTiers = [
+  {
+    name: "Diamond Sponsor",
+    amount: "₹ 5,00,000/-",
+    passes: "50 complimentary delegate passes",
+    stalls: "Stall 8x8 · 5 nos",
+    branding: "Branding",
+    accent: "#1751b5",
+    tint: "#eef4fd",
+  },
+  {
+    name: "Platinum Sponsor",
+    amount: "₹ 4,00,000/-",
+    passes: "40 complimentary delegate passes",
+    stalls: "Stall 8x8 · 4 nos",
+    branding: "Branding",
+    accent: "#8f9aa5",
+    tint: "#f3f5f7",
+  },
+  {
+    name: "Gold Sponsor",
+    amount: "₹ 3,00,000/-",
+    passes: "30 complimentary delegate passes",
+    stalls: "Stall 8x8 · 3 nos",
+    branding: "Branding",
+    accent: "#d0a020",
+    tint: "#fdf8ea",
+  },
+  {
+    name: "Silver Sponsor",
+    amount: "₹ 2,00,000/-",
+    passes: "20 complimentary delegate passes",
+    stalls: "Stall 8x8 · 2 nos",
+    branding: "Branding",
+    accent: "#dd6a2b",
+    tint: "#fdf2ec",
+  },
+  {
+    name: "Bronze Sponsor",
+    amount: "₹ 1,00,000/-",
+    passes: "10 complimentary delegate passes",
+    stalls: "Stall 8x8 · 1 no",
+    branding: "Branding",
+    accent: "#5f6b78",
+    tint: "#f2f4f6",
+  },
+];
+
+/* ---------------------------- Leadership team --------------------------- */
 export const leaders = [
   {
     name: "Shri Rajiv Ranjan",
@@ -1160,48 +1225,101 @@ export const committees = [
 
 export const venues = [
   {
-    name: "Main Conference Hall",
-    capacity: "120 seated, theatre style",
-    area: "1,800 sq ft",
-    image: img.lectureHall,
-    rates: "Members ₹ 6,000 / half day · Non-members ₹ 10,000 / half day",
+    name: "Sir Visvesvaraya Hall",
+    capacity: "50 seated, theatre style",
+    area: "1,000 sq ft",
+    image: img.aimoHall,
+    rates: "Members ₹ 500 / hour · Non-members ₹ 400 / hour (minimum rent per hour)",
     features: [
-      "Projector, screen and PA system",
-      "Podium with cordless microphones",
-      "Centrally air-conditioned",
-      "Adjacent space for tea and registration",
-      "Wi-Fi throughout",
+      "Suitable for seminars, workshops, meetings, conferences and training programmes",
+      "Audio facility included",
+      "Projector included",
+      "Air-conditioned",
+      "Wi-Fi",
+      "Whiteboard, markers and extension power cords",
+      "External food catering allowed",
     ],
   },
   {
     name: "Board Room",
-    capacity: "18 seated, boardroom style",
-    area: "600 sq ft",
-    image: img.boardroom,
-    rates: "Members ₹ 2,500 / half day · Non-members ₹ 4,000 / half day",
+    capacity: "12 seated, round table",
+    area: "250 sq ft",
+    image: img.aimoBoardRoom,
+    rates: "Members ₹ 357 / hour · Non-members ₹ 400 / hour (minimum rent per hour)",
     features: [
-      "Large display with HDMI and casting",
-      "Speakerphone for hybrid meetings",
-      "Writing wall and flip chart",
-      "Pantry service on request",
-      "Suited to interviews and small committees",
-    ],
-  },
-  {
-    name: "Training Room",
-    capacity: "40 seated, classroom style",
-    area: "900 sq ft",
-    image: img.dataScreen,
-    rates: "Members ₹ 3,500 / half day · Non-members ₹ 6,000 / half day",
-    features: [
-      "Classroom desks with power points",
-      "Whiteboard and projector",
-      "Suited to workshops and certification courses",
-      "Breakout corner for group work",
-      "Wi-Fi throughout",
+      "Suited to board and business meetings, domestic enquiries, interviews and union meetings",
+      "Audio facility can be hired at extra cost",
+      "Projector can be hired at extra cost",
+      "Air-conditioned",
+      "Wi-Fi",
+      "Whiteboard, markers and extension power cords",
+      "External food catering allowed",
     ],
   },
 ];
+
+/** Venue detail exactly as supplied in the AIMO hall booking sheet. */
+export const hallBooking = {
+  lead: "Looking for a state-of-the-art venue in Chennai? Here at AIMO, we have it for you.",
+  spaces: [
+    {
+      name: "Sir Visvesvaraya Hall",
+      note: "Suitable to host seminars, workshops, meetings, conferences and training programmes.",
+    },
+    {
+      name: "Board Room",
+      note: "Programmes such as board and business meetings, domestic enquiries, interviews and union meetings can be conducted here.",
+    },
+  ],
+  highlights: [
+    "Conveniently located in the heart of Chennai at Nungambakkam",
+    "Easily accessible",
+    "Cosy environment for relaxed learning and discussion",
+    "Comfortable cushioned chairs for prolonged seating",
+    "Great eateries nearby, including Karachi Bakery & Cafe, Apoorva's Sangeetha and Vasantha Bhavan",
+  ],
+  /** Facility comparison. `hall` = Sir Visvesvaraya Hall, `board` = Board Room. */
+  facilities: [
+    { label: "Area", hall: "1,000 sq ft", board: "250 sq ft" },
+    { label: "Seating capacity", hall: "50", board: "12" },
+    { label: "Seating style", hall: "Theatre", board: "Round table" },
+    { label: "Air conditioning", hall: "Yes", board: "Yes" },
+    { label: "Audio facility", hall: "Yes", board: "At extra cost" },
+    { label: "Projector", hall: "Yes", board: "At extra cost" },
+    { label: "Wi-Fi", hall: "Yes", board: "Yes" },
+    {
+      label: "Whiteboard, markers and extension power cords",
+      hall: "Yes",
+      board: "Yes",
+    },
+    { label: "External food catering", hall: "Allowed", board: "Allowed" },
+  ],
+  ratesNote: "Minimum rent per hour",
+  rates: [
+    {
+      space: "Sir Visvesvaraya Hall",
+      members: "₹ 500 / hour",
+      nonMembers: "₹ 400 / hour",
+    },
+    {
+      space: "Board Room",
+      members: "₹ 357 / hour",
+      nonMembers: "₹ 400 / hour",
+    },
+  ],
+  bookingContact: {
+    attn: "The Manager",
+    org: "All India Manufacturers' Organisation, IR & D Trust",
+    addressLines: [
+      "Round Table House, 2nd Floor",
+      "80 Nungambakkam High Road",
+      "Chennai – 600 034",
+    ],
+    phones: ["2822 8383", "90921 40000"],
+    email: "aimo@aimotnsb.com",
+    mapQuery: "Round Table House, Nungambakkam High Road, Chennai 600034",
+  },
+};
 
 /* ------------------------------ Magazine -------------------------------- */
 

@@ -11,6 +11,7 @@ import { nav } from "@/lib/site";
    (`h-* w-auto`), so these only fix the aspect ratio. */
 const WORDMARK = { w: 800, h: 175 };
 const EMBLEM = { w: 263, h: 300 };
+const BADGE = { w: 300, h: 300 };
 
 export default function Header() {
   const pathname = usePathname();
@@ -44,17 +45,46 @@ export default function Header() {
     <>
       {/* -------- Masthead: centred wordmark, scrolls away -------- */}
       <div className="bg-white">
-        <div className="shell flex items-center justify-center py-3 lg:py-3.5">
-          <Link href="/" aria-label="All India Manufacturers' Organisation — home">
+        <div className="shell flex items-center justify-between gap-3 py-2.5 sm:gap-6">
+          {/* AIMO emblem — top-left anchor */}
+          <Link href="/" aria-label="AIMO — home" className="flex shrink-0 items-center">
             <Image
-              src="/aimo-logo-left.png"
+              src="/assets/aimo-logo-left.png"
+              alt="AIMO emblem"
+              width={EMBLEM.w}
+              height={EMBLEM.h}
+              priority
+              className="h-12 w-auto sm:h-[60px] lg:h-[94px]"
+            />
+          </Link>
+
+          {/* Centred wordmark */}
+          <Link
+            href="/"
+            aria-label="All India Manufacturers' Organisation — home"
+            className="flex min-w-0 flex-1 items-center justify-center"
+          >
+            <Image
+              src="/assets/aimo-logo-center.png"
               alt="All India Manufacturers' Organisation — founded by Bharat Ratna Sir M. Visvesvaraya in 1941"
               width={WORDMARK.w}
               height={WORDMARK.h}
               priority
-              className="h-14 w-auto sm:h-16 lg:h-[86px]"
+              className="h-11 w-auto max-w-full sm:h-14 lg:h-[86px]"
             />
           </Link>
+
+          {/* 80th-year commemorative badge — top-right anchor */}
+          <div className="flex shrink-0 items-center">
+            <Image
+              src="/assets/aimo-80logo-right.png"
+              alt="AIMO — 80 years, 2023–2024"
+              width={BADGE.w}
+              height={BADGE.h}
+              priority
+              className="h-12 w-auto sm:h-[60px] lg:h-[94px]"
+            />
+          </div>
         </div>
       </div>
 
@@ -67,15 +97,20 @@ export default function Header() {
         }`}
       >
         <div className="shell flex h-[68px] items-center justify-between gap-4">
-          {/* AIMO emblem — permanent left anchor of the nav bar */}
-          <Link href="/" aria-label="AIMO — home" className="flex shrink-0 items-center">
+          {/* Compact emblem — appears only once the masthead has scrolled away */}
+          <Link
+            href="/"
+            aria-label="AIMO — home"
+            className={`shrink-0 items-center transition-opacity duration-200 ${
+              stuck ? "flex opacity-100" : "hidden opacity-0"
+            }`}
+          >
             <Image
-              src="/aimo-logo-right.png"
+              src="/assets/aimo-logo-left.png"
               alt="AIMO emblem"
               width={EMBLEM.w}
               height={EMBLEM.h}
-              priority
-              className="h-14 w-auto sm:h-16"
+              className="h-14 w-auto lg:h-[58px]"
             />
           </Link>
 
@@ -113,7 +148,10 @@ export default function Header() {
           </nav>
 
           <div className="ml-auto flex items-center gap-3 xl:ml-0">
-            <Link href="/membership/apply" className="btn btn-primary hidden md:inline-flex">
+            <Link
+              href="/membership/apply"
+              className="btn btn-primary hidden rounded-full px-5 py-2.5 text-[13.5px] md:inline-flex"
+            >
               Become a Member
             </Link>
             <button
@@ -136,7 +174,7 @@ export default function Header() {
             <div className="absolute right-0 top-0 h-full w-[86%] max-w-sm overflow-y-auto bg-white p-6 shadow-2xl">
               <div className="mb-6 flex items-center justify-between">
                 <Image
-                  src="/aimo-logo-right.png"
+                  src="/assets/aimo-logo-left.png"
                   alt="AIMO"
                   width={EMBLEM.w}
                   height={EMBLEM.h}

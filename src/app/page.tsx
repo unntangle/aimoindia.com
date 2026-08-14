@@ -3,7 +3,6 @@ import Pillars from "@/components/home/Pillars";
 import Stats from "@/components/home/Stats";
 import UpcomingEvent from "@/components/home/UpcomingEvent";
 import Leadership from "@/components/home/Leadership";
-import EventsSchedule from "@/components/home/EventsSchedule";
 import WhyJoin from "@/components/home/WhyJoin";
 import Newsletter from "@/components/home/Newsletter";
 import FocusSectors from "@/components/home/FocusSectors";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Stats />
       <UpcomingEvent />
       <Leadership />
-      <EventsSchedule />
       <WhyJoin />
       <Newsletter />
       <FocusSectors />

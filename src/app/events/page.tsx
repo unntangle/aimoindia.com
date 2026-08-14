@@ -1,71 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Camera, Clock, MapPin, Trophy } from "lucide-react";
+import { ArrowRight, CalendarDays, Camera, Store, Tag, Trophy, Users } from "lucide-react";
 import PageHero from "@/components/layout/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import UpcomingEvent from "@/components/home/UpcomingEvent";
 import Newsletter from "@/components/home/Newsletter";
-import Img from "@/components/ui/Img";
-import { img } from "@/lib/site";
+import { img, sponsorTiers } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Events",
   description:
     "AIMO's calendar of conclaves, credit clinics, export workshops, factory visits and award nights, held across India's states.",
 };
-
-const upcoming = [
-  {
-    day: "19",
-    month: "Nov",
-    title: "AIMO National Manufacturing Summit",
-    venue: "Nehru Centre, Worli, Mumbai",
-    time: "09:30 AM – 6:00 PM IST",
-    type: "Convention",
-    body: "Two days on export competitiveness, credit access, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters.",
-    image: img.speaker,
-  },
-  {
-    day: "04",
-    month: "Sep",
-    title: "Credit Clinic with Public Sector Banks",
-    venue: "AIMO Tamil Nadu Board, Chennai",
-    time: "10:00 AM – 4:00 PM IST",
-    type: "Clinic",
-    body: "Bring your last two years of financials. Bankers review collateral-free lending eligibility case by case, on the day.",
-    image: img.handshake,
-  },
-  {
-    day: "22",
-    month: "Sep",
-    title: "Export Readiness Workshop",
-    venue: "Coimbatore",
-    time: "11:00 AM – 5:00 PM IST",
-    type: "Workshop",
-    body: "Documentation, incoterms, RoDTEP claims and the practical mechanics of a first shipment, taught by members who have done it.",
-    image: img.warehouse,
-  },
-  {
-    day: "11",
-    month: "Oct",
-    title: "Young Entrepreneurs Forum",
-    venue: "Bengaluru",
-    time: "05:00 PM – 8:30 PM IST",
-    type: "Forum",
-    body: "For under-40 promoters taking over or building a unit. Mentor pairing, followed by an open floor.",
-    image: img.networking,
-  },
-  {
-    day: "30",
-    month: "Oct",
-    title: "Shop-Floor Automation Site Visit",
-    venue: "Pune industrial belt",
-    time: "10:00 AM – 2:00 PM IST",
-    type: "Site visit",
-    body: "A working tour of a member unit that automated in stages without displacing its workforce. Limited to 40 participants.",
-    image: img.precision,
-  },
-];
 
 export default function EventsPage() {
   return (
@@ -80,67 +26,70 @@ export default function EventsPage() {
 
       <UpcomingEvent />
 
-      {/* Listing */}
-      <section className="py-20 lg:py-24">
+      {/* Sponsorship */}
+      <section id="sponsor" className="scroll-mt-28 py-20 lg:py-24">
         <div className="shell">
           <SectionHeading
-            eyebrow="What's Next"
-            title="The months ahead"
-            intro="Members attend free unless otherwise stated. Non-members are welcome at open sessions."
+            eyebrow="Partner With Us"
+            title="Sponsorship categories & privileges"
+            intro="Five tiers, each carrying complimentary delegate passes, exhibition stalls and branding across the event."
           />
 
-          <div className="mt-14 space-y-5">
-            {upcoming.map((e) => (
+          <div className="mt-14 space-y-4">
+            {sponsorTiers.map((t) => (
               <article
-                key={e.title}
-                className="card group grid gap-6 p-5 sm:grid-cols-[auto_1fr_auto] sm:items-center sm:p-6"
+                key={t.name}
+                className="grid overflow-hidden rounded-xl border border-hairline md:grid-cols-[minmax(190px,230px)_1fr]"
+                style={{ backgroundColor: t.tint }}
               >
-                <div className="flex items-center gap-5">
-                  <div className="grid h-20 w-20 shrink-0 place-content-center rounded-lg bg-brand text-center text-white">
-                    <span className="font-display text-2xl font-extrabold leading-none">
-                      {e.day}
-                    </span>
-                    <span className="mt-1 text-[11px] font-medium uppercase tracking-widest">
-                      {e.month}
-                    </span>
-                  </div>
-                  <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg sm:hidden lg:block">
-                    <Img
-                      src={e.image}
-                      alt={e.title}
-                      sizes="112px"
-                      seed={`ev-list-${e.day}`}
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <span className="inline-block rounded-full bg-brand-soft px-3 py-1 font-display text-[11.5px] font-semibold uppercase tracking-widest text-brand">
-                    {e.type}
-                  </span>
-                  <h3 className="mt-2.5 text-[19px] transition-colors group-hover:text-brand">
-                    {e.title}
+                {/* Tier name & amount */}
+                <div
+                  className="flex flex-col items-center justify-center gap-3 px-6 py-6 text-center"
+                  style={{ backgroundColor: t.accent }}
+                >
+                  <h3 className="font-display text-[15px] font-bold uppercase tracking-wider text-white">
+                    {t.name}
                   </h3>
-                  <p className="mt-2 text-[14.5px] leading-relaxed text-slatey">{e.body}</p>
-                  <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5 text-[13.5px] text-slatey">
-                    <span className="flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 text-brand" />
-                      {e.venue}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5 text-brand" />
-                      {e.time}
-                    </span>
-                  </p>
+                  <span className="rounded-full bg-navy/85 px-4 py-1.5 font-display text-[14px] font-semibold text-white">
+                    {t.amount}
+                  </span>
                 </div>
 
-                <Link href="/contact" className="btn btn-outline sm:self-center">
-                  Register
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                {/* Privileges */}
+                <div className="grid gap-5 p-6 sm:grid-cols-3 sm:gap-0">
+                  {[
+                    { icon: Users, text: t.passes },
+                    { icon: Store, text: t.stalls },
+                    { icon: Tag, text: t.branding },
+                  ].map(({ icon: Icon, text }, i) => (
+                    <div
+                      key={text}
+                      className={`flex items-center gap-3.5 sm:px-5 ${
+                        i > 0 ? "sm:border-l sm:border-hairline" : ""
+                      }`}
+                    >
+                      <span
+                        className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 bg-white"
+                        style={{ borderColor: t.accent, color: t.accent }}
+                      >
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <span className="text-[14.5px] leading-snug text-navy">{text}</span>
+                    </div>
+                  ))}
+                </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center gap-5">
+            <Link href="/contact" className="btn btn-primary">
+              Enquire about sponsorship
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <p className="text-[14px] text-slatey">
+              Stall sizes are quoted in feet. All amounts are exclusive of applicable taxes.
+            </p>
           </div>
         </div>
       </section>

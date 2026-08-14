@@ -33,6 +33,7 @@ const otherLinks = [
   { label: "Photo Gallery", href: "/gallery" },
   { label: "AIMO Awards", href: "/awards" },
   { label: "Press Release", href: "/press" },
+  { label: "Book Hall & Board Room", href: "/resources/book-hall" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -45,7 +46,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-md bg-white p-1.5">
               <Image
-                src="/aimo-logo-right.png"
+                src="/assets/aimo-logo-left.png"
                 alt="AIMO emblem"
                 width={263}
                 height={300}
