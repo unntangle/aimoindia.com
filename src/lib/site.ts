@@ -125,9 +125,8 @@ export const heroSlides = [
     eyebrow: "Upcoming · 25–26 September 2026",
     title: "AIMO KAVERI-TECHKNOW 2026",
     body: "Two days on the questions that will decide the next decade of Indian manufacturing: export competitiveness, credit beyond collateral, energy costs and the skills pipeline. Ministers, bankers, buyers and 900 promoters at the Nehru Centre, Mumbai.",
-    image: img.summitCrowd,
+    image: img.aimoEvent4,
     cta: { label: "View Event Details", href: "/events" },
-    cta2: { label: "Past Events", href: "/events/past" },
     alt: "Delegates at AIMO KAVERI-TECHKNOW 2026",
   },
   {
